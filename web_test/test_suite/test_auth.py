@@ -14,7 +14,7 @@ class TestUserAuth(BaseTest):
     
     def setUp(self):
         """测试前准备：生成所有需要的测试文件"""
-        super().setUp()  # 调用父类的setUp方法
+        super().setUp()
         self.test_files = {}  # 存储测试文件路径
         
         # 生成2MB以内的PNG图片
@@ -27,11 +27,11 @@ class TestUserAuth(BaseTest):
         
         # 生成超过2MB的PNG图片
         self.test_files['large_png'] = self._create_image(
-            size=(5000, 5000),  # 增大尺寸到5000×5000
+            size=(5000, 5000),
             color=None,  # 不使用单一颜色
             format='PNG',
             suffix='.png',
-            add_noise=True  # 新增参数：添加噪点增加文件大小
+            add_noise=True  # 添加噪点增加文件大小
         )
         
         # 生成2MB以内的JPG图片
@@ -45,7 +45,7 @@ class TestUserAuth(BaseTest):
         
         # 生成超过2MB的JPG图片
         self.test_files['large_jpg'] = self._create_image(
-            size=(6000, 6000),  # 增大尺寸到6000×6000
+            size=(6000, 6000),
             color=(255, 255, 0),
             format='JPEG',
             suffix='.jpg',
@@ -65,7 +65,7 @@ class TestUserAuth(BaseTest):
                     # 针对Windows系统的强制删除
                     if os.name == 'nt':
                         os.system(f"del /f {file_path}")
-        super().tearDown()  # 调用父类的tearDown方法
+        super().tearDown()
     
     def _create_image(self, size, color, format, suffix, quality=100, add_noise=False):
         """创建临时图片文件的工具方法"""
