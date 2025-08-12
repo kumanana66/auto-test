@@ -5,8 +5,8 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/spring_demo?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
-    username: root
-    password: 200166
+    username: your_username
+    password: your_password
   jpa:
     hibernate:
       ddl-auto: update
@@ -21,8 +21,8 @@ spring:
         max-file-size: 2MB
         max-request-size: 2MB
   mail:
-    username: 1197994090@qq.com
-    password: nazzftetszutbace # 授权码
+    username: your_eamil
+    password: your_coude # 授权码
     host: smtp.qq.com  # SMTP服务器（根据邮箱类型修改）
     port: 587
     properties:
@@ -44,7 +44,7 @@ logging:
 # 头像上传配置
 avatar:
   upload:
-    path: D:/test_python/uploads/avatars/
+    path: your_avatar_path
   access:
     url-prefix: http://localhost:8080/avatars/
 
