@@ -1,0 +1,9 @@
+/* 引入Element Plus样式 */
+@import 'element-plus/dist/index.css';
+
+/* 自定义样式 */
+.el-form-item__error {
+    margin-top: 2px;
+    font-size: 12px;
+    color: #f56c6c;
+}

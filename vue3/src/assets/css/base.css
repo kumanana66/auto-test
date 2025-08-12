@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.5;
+}
+
+a {
+    color: #409EFF;
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    color: #66b1ff;
+    text-decoration: underline;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
