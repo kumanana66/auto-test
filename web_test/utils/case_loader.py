@@ -1,5 +1,4 @@
 import json
-# python -m unittest discover -s test_suite
 
 class TestCaseLoader:
     def __init__(self, case_file="test_case.json"):
