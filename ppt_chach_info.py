@@ -7,49 +7,40 @@ from openpyxl.styles import Font
 def extract_ppt_data(ppt_path, output_excel_path):
     """从PPT中提取所有文本框、图表和表格数据，并保存到Excel的同一个工作表中"""
     try:
-        # 检查文件路径
         if not os.path.exists(ppt_path):
             print(f"错误：PPT文件 '{ppt_path}' 不存在")
             return
         
-        # 创建输出目录
         output_dir = os.path.dirname(output_excel_path)
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
         
-        # 创建PPT应用实例
         ppt = win32com.client.Dispatch("PowerPoint.Application")
-        ppt.Visible = True  # 在前台显示（图表数据激活操作需要可见窗口）
-        # ppt.DisplayAlerts = False  # 禁用警告提示
+        ppt.Visible = True
+        # ppt.DisplayAlerts = False
         presentation = ppt.Presentations.Open(ppt_path)
         print(f"已打开PPT: {ppt_path}")
-        
-        # 创建Excel工作簿
+
         wb = Workbook()
         ws = wb.active
         ws.title = "汇总"
-        
-        # 设置表头
+
         headers = ["幻灯片编号", "类型", "形状名称", "内容/标题", "数据列1", "数据列2", "数据列3", "数据列4"]
         ws.append(headers)
-        
-        # 设置表头样式
+
         for cell in ws[1]:
             cell.font = Font(bold=True)
-        
-        # 当前行号（从2开始，因为第1行是表头）
+
         current_row = 2
-        
-        # 遍历所有幻灯片
+
         for slide_idx, slide in enumerate(presentation.Slides, 1):
             print(f"\n处理幻灯片 {slide_idx}...")
             
-            # 遍历所有形状
             for shape in slide.Shapes:
                 shape_name = shape.Name
                 print(f"  处理形状: {shape_name}")
                 
-                # 1. 优先处理表格（修正顺序）
+                # 1. 处理表格
                 if shape.HasTable:
                     try:
                         table = shape.Table
@@ -64,14 +55,14 @@ def extract_ppt_data(ppt_path, output_excel_path):
                             ws.cell(row=current_row, column=2, value="表格")
                             ws.cell(row=current_row, column=3, value=shape_name)
                             
-                            # 如果是第一行，作为内容/标题
+                            # 如果是第一行，作为标题
                             if row == 1:
                                 ws.cell(row=current_row, column=4, value="表头")
                             else:
                                 ws.cell(row=current_row, column=4, value=f"数据行{row-1}")
                             
                             # 写入数据列
-                            for col in range(1, min(cols, 8-4+1) + 1):  # 最多写入4个数据列
+                            for col in range(1, min(cols, 8-4+1) + 1):
                                 cell_text = table.Cell(row, col).Shape.TextFrame.TextRange.Text
                                 ws.cell(row=current_row, column=4+col, value=cell_text)
                             
@@ -130,13 +121,12 @@ def extract_ppt_data(ppt_path, output_excel_path):
                                 ws.cell(row=current_row, column=4, value=f"数据行{row-1}")
                             
                             # 写入数据列
-                            for col in range(1, min(cols, 8-4+1) + 1):  # 最多写入4个数据列
+                            for col in range(1, min(cols, 8-4+1) + 1):
                                 cell_value = worksheet.Cells(row, col).Value
                                 ws.cell(row=current_row, column=4+col, value=cell_value)
                             
                             current_row += 1
-                        
-                        # 关闭工作簿
+
                         workbook.Close(SaveChanges=False)
                         
                     except Exception as e:
@@ -147,7 +137,7 @@ def extract_ppt_data(ppt_path, output_excel_path):
                         ws.cell(row=current_row, column=4, value=str(e))
                         current_row += 1
                 
-                # 3. 最后处理文本框
+                # 3. 处理文本框
                 elif shape.HasTextFrame:
                     text_frame = shape.TextFrame
                     if text_frame.HasText:
@@ -172,11 +162,9 @@ def extract_ppt_data(ppt_path, output_excel_path):
             adjusted_width = (max_length + 2)
             ws.column_dimensions[column_letter].width = min(adjusted_width, 50)
         
-        # 保存Excel文件
         wb.save(output_excel_path)
         print(f"\n数据已成功保存到: {output_excel_path}")
-        
-        # 关闭PPT
+
         presentation.Close()
         ppt.Quit()
         
