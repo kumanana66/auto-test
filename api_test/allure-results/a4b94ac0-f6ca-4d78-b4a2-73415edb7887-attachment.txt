@@ -1,0 +1,19 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjI4MTQsImV4cCI6MTc1NDYzMDAxNH0._4m0WkFa99iIm_0RmDzEY50fv_hJufSmApzfqsdw0xE","expiresIn":7200}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjI4MTQsImV4cCI6MTc1NDYzMDAxNH0._4m0WkFa99iIm_0RmDzEY50fv_hJufSmApzfqsdw0xE'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"任务创建成功","data":{"id":595,"processName":"测试任务_None","asinList":"B08XJ8J7SZ","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-08T11:13:35.0522303","updateTime":"2025-08-08T11:13:35.0522303","status":"ACTIVE","userId":4,"username":"admin1155"}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjI4MTQsImV4cCI6MTc1NDYzMDAxNH0._4m0WkFa99iIm_0RmDzEY50fv_hJufSmApzfqsdw0xE'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"任务列表获取成功","data":{"content":[{"id":595,"processName":"测试任务_None","asinList":"B08XJ8J7SZ","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-08T11:13:35.05223","updateTime":"2025-08-08T11:13:35.05223","status":"ACTIVE","userId":4,"username":"admin1155"},{"id":591,"processName":"并发测试","asinList":"B000000001","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-08T11:13:32.917254","updateTime":"2025-08-
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/595
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjI4MTQsImV4cCI6MTc1NDYzMDAxNH0._4m0WkFa99iIm_0RmDzEY50fv_hJufSmApzfqsdw0xE'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"任务删除成功"}

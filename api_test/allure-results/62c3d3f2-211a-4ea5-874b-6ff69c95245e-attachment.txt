@@ -1,0 +1,1 @@
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:103 开始执行用例: auth_024 - 上传2MB以内的JPG图片

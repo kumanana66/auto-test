@@ -1,0 +1,16 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYxODEsImV4cCI6MTc1Mzk5MzM4MX0.4Zu_B9yi21xfcp3E-dobS-yWq6WrW8xdGvIZqYGXr10","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_003 - 用户名长度为20位（最大值）
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:tests.test_user_auth:为注册邮箱 test_0lkg8p@example.com 填充验证码: 741637
+INFO:tests.test_user_auth:是否使用Token: True
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYxODEsImV4cCI6MTc1Mzk5MzM4MX0.4Zu_B9yi21xfcp3E-dobS-yWq6WrW8xdGvIZqYGXr10'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"注册成功","data":null}

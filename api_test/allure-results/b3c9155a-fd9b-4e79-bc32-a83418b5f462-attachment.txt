@@ -1,0 +1,24 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/send-verify-code
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/register
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"注册成功","data":null}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2h4bnZyZiIsImlhdCI6MTc1NDk3NDk5OSwiZXhwIjoxNzU0OTgyMTk5fQ.q81tt8vwrG7d-wKNGxRTo55BdvKz16KMXMhslG7vQ50","expiresIn":7200}}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:79 开始执行用例: auth_024 - 上传2MB以内的JPG图片
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:116 用例auth_024不需要验证码，跳过发送逻辑
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:120 是否使用Token: True
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/upload/avatar
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2h4bnZyZiIsImlhdCI6MTc1NDk3NDk5OSwiZXhwIjoxNzU0OTgyMTk5fQ.q81tt8vwrG7d-wKNGxRTo55BdvKz16KMXMhslG7vQ50'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":false,"message":"仅支持JPG、PNG格式的图片","data":null}
+[1m[31mERROR   [0m tests.test_user_auth:test_user_auth.py:143 用例断言失败: success字段不符：预期True，实际False，完整response：{"success":false,"message":"仅支持JPG、PNG格式的图片","data":null}
+assert False == True
+ +  where False = <built-in method get of dict object at 0x00000274E617FE80>('success')
+ +    where <built-in method get of dict object at 0x00000274E617FE80> = {'data': None, 'message': '仅支持JPG、PNG格式的图片', 'success': False}.get

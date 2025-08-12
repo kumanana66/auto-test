@@ -1,0 +1,20 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/send-verify-code
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/register
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"注册成功","data":null}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X290d3V4cyIsImlhdCI6MTc1Mzk4Nzg3MywiZXhwIjoxNzUzOTk1MDczfQ.WXeq7Fo32ak3hG0aKR4TW7nfRjHcrQzmGwR9SA8wggE","expiresIn":7200}}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:45 开始执行用例: auth_012 - 密码仅包含数字
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:74 是否使用Token: True
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/register
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X290d3V4cyIsImlhdCI6MTc1Mzk4Nzg3MywiZXhwIjoxNzUzOTk1MDczfQ.WXeq7Fo32ak3hG0aKR4TW7nfRjHcrQzmGwR9SA8wggE'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 400
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":false,"message":"验证码不能为空","data":null}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:116 清理测试用户: test_otwuxs@example.com

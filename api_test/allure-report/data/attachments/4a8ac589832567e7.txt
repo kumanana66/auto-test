@@ -1,0 +1,11 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYyMTQsImV4cCI6MTc1Mzk5MzQxNH0.KuEkssk_f5X2EgotGF5_9P1PV9ko0agRnBvWrpjpC_U","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_013 - 密码与确认密码不一致
+INFO:tests.test_user_auth:是否使用Token: True
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYyMTQsImV4cCI6MTc1Mzk5MzQxNH0.KuEkssk_f5X2EgotGF5_9P1PV9ko0agRnBvWrpjpC_U'}
+INFO:utils.request:响应状态码: 400
+INFO:utils.request:响应内容: {"success":false,"message":"密码长度需在8-20位之间; 验证码不能为空","data":null}

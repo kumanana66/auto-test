@@ -1,0 +1,19 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2NDA1MDYsImV4cCI6MTc1NDY0NzcwNn0.0B4xSHRnf7RDZ2yOlg7BwtnGKl69p51lrWsWZJOhXNc","expiresIn":7200}}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/crawler/tasks
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2NDA1MDYsImV4cCI6MTc1NDY0NzcwNn0.0B4xSHRnf7RDZ2yOlg7BwtnGKl69p51lrWsWZJOhXNc'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"任务创建成功","data":{"id":740,"processName":"测试任务_None","asinList":"B08XJ8J7SZ","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-08T16:08:26.8740674","updateTime":"2025-08-08T16:08:26.8740674","status":"ACTIVE","userId":4,"username":"admin1155"}}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/crawler/tasks
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2NDA1MDYsImV4cCI6MTc1NDY0NzcwNn0.0B4xSHRnf7RDZ2yOlg7BwtnGKl69p51lrWsWZJOhXNc'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 400
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":false,"message":"ASIN列表格式错误，请使用逗号分隔","data":null}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/crawler/tasks/740
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2NDA1MDYsImV4cCI6MTc1NDY0NzcwNn0.0B4xSHRnf7RDZ2yOlg7BwtnGKl69p51lrWsWZJOhXNc'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"操作成功","data":"任务删除成功"}

@@ -1,0 +1,6 @@
+INFO:tests.test_user_auth:开始执行用例: auth_022 - 旧密码错误
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 500
+INFO:utils.request:响应内容: {"success":false,"message":"发送验证码失败，请稍后重试","data":null}
+INFO:tests.test_user_auth:验证码发送响应（邮箱：admin1155@example.com）：状态码=500，内容={"success":false,"message":"发送验证码失败，请稍后重试","data":null}

@@ -1,0 +1,24 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5OTAyOTksImV4cCI6MTc1Mzk5NzQ5OX0.Xwa21DHeAsigh3P7bUUhz5hOy92nf8ieD4DKV5ECtQs","expiresIn":7200}}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/crawler/tasks
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5OTAyOTksImV4cCI6MTc1Mzk5NzQ5OX0.Xwa21DHeAsigh3P7bUUhz5hOy92nf8ieD4DKV5ECtQs'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"任务创建成功","data":{"id":403,"processName":"测试任务_None","asinList":"B08XJ8J7SZ","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-01T03:31:39.1633662","updateTime":"2025-08-01T03:31:39.1633662","status":"ACTIVE","userId":4,"username":"admin1155"}}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/crawler/tasks/403/analyze
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5OTAyOTksImV4cCI6MTc1Mzk5NzQ5OX0.Xwa21DHeAsigh3P7bUUhz5hOy92nf8ieD4DKV5ECtQs'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"操作成功","data":"数据分析已启动"}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/crawler/tasks/403/analyze/status
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5OTAyOTksImV4cCI6MTc1Mzk5NzQ5OX0.Xwa21DHeAsigh3P7bUUhz5hOy92nf8ieD4DKV5ECtQs'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"查询状态成功","data":"FAILED"}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/crawler/tasks/403
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5OTAyOTksImV4cCI6MTc1Mzk5NzQ5OX0.Xwa21DHeAsigh3P7bUUhz5hOy92nf8ieD4DKV5ECtQs'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"操作成功","data":"任务删除成功"}

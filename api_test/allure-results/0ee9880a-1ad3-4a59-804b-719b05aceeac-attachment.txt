@@ -1,0 +1,19 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDAsImV4cCI6MTc1NDk3ODg0MH0.w4i7way09gGO1i9q44C7jxknzv5dKwq7OU7_KgD1WgE","expiresIn":7200}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDAsImV4cCI6MTc1NDk3ODg0MH0.w4i7way09gGO1i9q44C7jxknzv5dKwq7OU7_KgD1WgE'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"任务创建成功","data":{"id":909,"processName":"测试任务_None","asinList":"B08XJ8J7SZ","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-12T12:07:20.404988","updateTime":"2025-08-12T12:07:20.404988","status":"ACTIVE","userId":4,"username":"admin1155"}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/909/run
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDAsImV4cCI6MTc1NDk3ODg0MH0.w4i7way09gGO1i9q44C7jxknzv5dKwq7OU7_KgD1WgE'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"任务已恢复执行"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/909
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDAsImV4cCI6MTc1NDk3ODg0MH0.w4i7way09gGO1i9q44C7jxknzv5dKwq7OU7_KgD1WgE'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"任务删除成功"}

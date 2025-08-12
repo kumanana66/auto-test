@@ -1,0 +1,9 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODY5ODEsImV4cCI6MTc1Mzk5NDE4MX0.R9WCCUcubb36B05thamiUqCYyaCC57ECl5tWcx2yK1A","expiresIn":7200}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODY5ODEsImV4cCI6MTc1Mzk5NDE4MX0.R9WCCUcubb36B05thamiUqCYyaCC57ECl5tWcx2yK1A'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"任务列表获取成功","data":{"content":[],"pageable":{"pageNumber":0,"pageSize":10,"sort":{"empty":false,"sorted":true,"unsorted":false},"offset":0,"paged":true,"unpaged":false},"last":true,"totalElements":0,"totalPages":0,"size":10,"number":0,"first":true,"numberOfElements":0,"sort":{"empty":false,"sorted":true,"unsorted":false},"empty":true}}

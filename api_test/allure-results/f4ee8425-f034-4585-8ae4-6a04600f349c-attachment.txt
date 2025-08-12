@@ -1,0 +1,1 @@
+响应内容: {"success":true,"message":"任务创建成功","data":{"id":926,"processName":"并发测试","asinList":"B000000001","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-12T13:02:05.5198467","updateTime":"2025-08-12T13:02:05.5198467","status":"ACTIVE","userId":4,"username":"admin1155"}}

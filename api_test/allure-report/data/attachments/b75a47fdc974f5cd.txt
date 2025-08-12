@@ -1,0 +1,11 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:36 请求头: {'Content-Type': 'application/json'}
+[32mINFO    [0m utils.request:request.py:51 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:52 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYyMDgsImV4cCI6MTc1Mzk5MzQwOH0.smArt2vx0cFVAWJomsBEKPVKSFBnSEvF2grNOfZoY1s","expiresIn":7200}}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:33 开始执行用例: auth_010 - 密码仅包含小写字母
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:59 是否使用Token: True
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/register
+[32mINFO    [0m utils.request:request.py:26 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:36 请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYyMDgsImV4cCI6MTc1Mzk5MzQwOH0.smArt2vx0cFVAWJomsBEKPVKSFBnSEvF2grNOfZoY1s'}
+[32mINFO    [0m utils.request:request.py:51 响应状态码: 400
+[32mINFO    [0m utils.request:request.py:52 响应内容: {"success":false,"message":"验证码不能为空","data":null}

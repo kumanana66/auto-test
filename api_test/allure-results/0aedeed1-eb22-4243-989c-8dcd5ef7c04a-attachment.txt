@@ -1,0 +1,26 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/send-verify-code
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/register
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"注册成功","data":null}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X3pjemViZCIsImlhdCI6MTc1NDYyOTg3MSwiZXhwIjoxNzU0NjM3MDcxfQ.ohen8GJBYJfYUGhgc7NqIzLLlBf_BM2W0HsQdBpWwR0","expiresIn":7200}}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:50 开始执行用例: auth_007 - 用户名已被注册
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/send-verify-code
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+[31m[1mERROR   [0m tests.test_user_auth:test_user_auth.py:20 当前发送验证码的邮箱：test_4u27tg@example.com，验证码接口完整响应：状态码=200，内容={"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:83 为注册邮箱 test_4u27tg@example.com 填充验证码: 010675
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:98 是否使用Token: True
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/register
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X3pjemViZCIsImlhdCI6MTc1NDYyOTg3MSwiZXhwIjoxNzU0NjM3MDcxfQ.ohen8GJBYJfYUGhgc7NqIzLLlBf_BM2W0HsQdBpWwR0'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 400
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":false,"message":"用户名已被注册","data":null}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:140 清理测试用户: test_zczebd@example.com

@@ -1,0 +1,13 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"注册成功","data":null}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X3F6aGpkaCIsImlhdCI6MTc1NDk3MjgzNCwiZXhwIjoxNzU0OTgwMDM0fQ.TPpdWvmE-1GeXAtfav2Tr9WEXY7cxmNTdrbYXE-UPeM","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_027 - 上传超过2MB的PNG图片

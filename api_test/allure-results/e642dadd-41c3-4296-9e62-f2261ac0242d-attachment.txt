@@ -1,0 +1,9 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:36 请求头: {'Content-Type': 'application/json'}
+[32mINFO    [0m utils.request:request.py:51 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:52 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYxNzEsImV4cCI6MTc1Mzk5MzM3MX0.zK-nKV5gA87c92ZxqcAnIPEtww1qnqyR8zmpdQuFASU","expiresIn":7200}}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/crawler/tasks/237
+[32mINFO    [0m utils.request:request.py:26 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:36 请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer '}
+[32mINFO    [0m utils.request:request.py:51 响应状态码: 403
+[32mINFO    [0m utils.request:request.py:52 响应内容:

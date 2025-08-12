@@ -1,0 +1,19 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjE1OTYsImV4cCI6MTc1NDYyODc5Nn0.bo49HmEj9wRqLYQ_pgZo4-s6jqkvz97rHc4vAFVmGHw","expiresIn":7200}}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/crawler/tasks
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjE1OTYsImV4cCI6MTc1NDYyODc5Nn0.bo49HmEj9wRqLYQ_pgZo4-s6jqkvz97rHc4vAFVmGHw'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"任务创建成功","data":{"id":573,"processName":"测试任务_None","asinList":"B08XJ8J7SZ","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-08T10:53:16.9688325","updateTime":"2025-08-08T10:53:16.9688325","status":"ACTIVE","userId":4,"username":"admin1155"}}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/crawler/tasks
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjE1OTYsImV4cCI6MTc1NDYyODc5Nn0.bo49HmEj9wRqLYQ_pgZo4-s6jqkvz97rHc4vAFVmGHw'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"任务列表获取成功","data":{"content":[{"id":573,"processName":"测试任务_None","asinList":"B08XJ8J7SZ","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-08T10:53:16.968833","updateTime":"2025-08-08T10:53:16.968833","status":"ACTIVE","userId":4,"username":"admin1155"},{"id":569,"processName":"并发测试","asinList":"B000000001","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-08T10:53:15.251084","updateTime":"2025-0
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/crawler/tasks/573
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjE1OTYsImV4cCI6MTc1NDYyODc5Nn0.bo49HmEj9wRqLYQ_pgZo4-s6jqkvz97rHc4vAFVmGHw'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"操作成功","data":"任务删除成功"}

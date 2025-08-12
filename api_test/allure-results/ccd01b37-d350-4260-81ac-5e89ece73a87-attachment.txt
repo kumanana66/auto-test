@@ -1,0 +1,26 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"注册成功","data":null}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2xrd3JxeSIsImlhdCI6MTc1NDYyMTYwNywiZXhwIjoxNzU0NjI4ODA3fQ.K-FyvEGlEQr2EfVL0yFKlCiKGLOiZOa1H-9rXLjXTvs","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_001 - 用户注册成功
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+ERROR:tests.test_user_auth:当前发送验证码的邮箱：test_4rnwde@example.com，验证码接口完整响应：状态码=200，内容={"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:tests.test_user_auth:为注册邮箱 test_4rnwde@example.com 填充验证码: 614518
+INFO:tests.test_user_auth:是否使用Token: True
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2xrd3JxeSIsImlhdCI6MTc1NDYyMTYwNywiZXhwIjoxNzU0NjI4ODA3fQ.K-FyvEGlEQr2EfVL0yFKlCiKGLOiZOa1H-9rXLjXTvs'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"注册成功","data":null}
+INFO:tests.test_user_auth:清理测试用户: test_lkwrqy@example.com

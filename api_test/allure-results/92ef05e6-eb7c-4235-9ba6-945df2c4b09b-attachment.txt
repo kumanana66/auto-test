@@ -1,0 +1,28 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"注册成功","data":null}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X3dxbGxjbyIsImlhdCI6MTc1NDk3NDk0OSwiZXhwIjoxNzU0OTgyMTQ5fQ.Pk6R-DLymn_O7M-5ggDIgh45u-3md6h74yfRE8s2VAg","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_003 - 用户名长度为20位（最大值）
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:tests.test_user_auth:发送验证码（第1次）到邮箱：test_hiewx4@example.com，响应状态码：200
+INFO:tests.test_user_auth:为邮箱 test_hiewx4@example.com 填充验证码: 513447
+INFO:tests.test_user_auth:是否使用Token: True
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X3dxbGxjbyIsImlhdCI6MTc1NDk3NDk0OSwiZXhwIjoxNzU0OTgyMTQ5fQ.Pk6R-DLymn_O7M-5ggDIgh45u-3md6h74yfRE8s2VAg'}
+INFO:utils.request:响应状态码: 400
+INFO:utils.request:响应内容: {"success":false,"message":"用户名已被注册","data":null}
+ERROR:tests.test_user_auth:用例断言失败: 状态码不符：预期200，实际400，完整response：{"success":false,"message":"用户名已被注册","data":null}
+assert 400 == 200
+ +  where 400 = <Response [400]>.status_code

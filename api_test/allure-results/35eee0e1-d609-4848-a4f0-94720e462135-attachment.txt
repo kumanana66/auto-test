@@ -1,0 +1,1 @@
+INFO:tests.test_user_auth:开始执行用例: auth_029 - 未登录状态上传头像

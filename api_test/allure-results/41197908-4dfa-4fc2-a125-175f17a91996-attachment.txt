@@ -1,0 +1,1 @@
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:103 开始执行用例: auth_028 - 上传非图片格式文件

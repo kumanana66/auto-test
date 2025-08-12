@@ -1,0 +1,25 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"注册成功","data":null}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X3d3ZGhvaiIsImlhdCI6MTc1NDk3NTAwMywiZXhwIjoxNzU0OTgyMjAzfQ.caaWOu-h8LsPW72QAHMxH3eVc7I0p06iU5egZa7ICWU","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_026 - 上传2MB以内的PNG图片
+INFO:tests.test_user_auth:用例auth_026不需要验证码，跳过发送逻辑
+INFO:tests.test_user_auth:是否使用Token: True
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/upload/avatar
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X3d3ZGhvaiIsImlhdCI6MTc1NDk3NTAwMywiZXhwIjoxNzU0OTgyMjAzfQ.caaWOu-h8LsPW72QAHMxH3eVc7I0p06iU5egZa7ICWU'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":false,"message":"仅支持JPG、PNG格式的图片","data":null}
+ERROR:tests.test_user_auth:用例断言失败: success字段不符：预期True，实际False，完整response：{"success":false,"message":"仅支持JPG、PNG格式的图片","data":null}
+assert False == True
+ +  where False = <built-in method get of dict object at 0x00000274E65EC240>('success')
+ +    where <built-in method get of dict object at 0x00000274E65EC240> = {'data': None, 'message': '仅支持JPG、PNG格式的图片', 'success': False}.get
+The process cannot access the file because it is being used by another process.

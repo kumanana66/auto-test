@@ -1,0 +1,11 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYyMjMsImV4cCI6MTc1Mzk5MzQyM30.yIYWleovlqXGrBM1XUCvhWo_cCwk3r1MJvSoVTVkT1s","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_017 - 正确账号密码登录
+INFO:tests.test_user_auth:是否使用Token: True
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYyMjMsImV4cCI6MTc1Mzk5MzQyM30.yIYWleovlqXGrBM1XUCvhWo_cCwk3r1MJvSoVTVkT1s'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYyMjUsImV4cCI6MTc1Mzk5MzQyNX0.4pEBZiC9AGbz6Zv4HZkSMZLaq2j14-nucFUTddxGWgo","expiresIn":7200}}

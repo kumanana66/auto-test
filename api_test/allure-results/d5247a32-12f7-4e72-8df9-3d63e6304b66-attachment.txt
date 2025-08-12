@@ -1,0 +1,1 @@
+响应内容: {"success":true,"message":"任务创建成功","data":{"id":455,"processName":"亚马逊监控","asinList":"B08XJ8J7SZ,B08LGD78Q5","requiredInfo":null,"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-01T03:36:37.4957841","updateTime":"2025-08-01T03:36:37.4957841","status":"ACTIVE","userId":4,"username":"admin1155"}}

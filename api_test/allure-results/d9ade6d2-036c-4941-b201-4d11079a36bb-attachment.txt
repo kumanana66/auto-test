@@ -1,0 +1,19 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjA2NzcsImV4cCI6MTc1NDYyNzg3N30.GXsUohbi7zaPPkSnH1xhuOzb7Niz8xW7JIpF3NdELws","expiresIn":7200}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjA2NzcsImV4cCI6MTc1NDYyNzg3N30.GXsUohbi7zaPPkSnH1xhuOzb7Niz8xW7JIpF3NdELws'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"任务创建成功","data":{"id":523,"processName":"测试任务_None","asinList":"B08XJ8J7SZ","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-08T10:37:57.5031615","updateTime":"2025-08-08T10:37:57.5031615","status":"ACTIVE","userId":4,"username":"admin1155"}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjA2NzcsImV4cCI6MTc1NDYyNzg3N30.GXsUohbi7zaPPkSnH1xhuOzb7Niz8xW7JIpF3NdELws'}
+INFO:utils.request:响应状态码: 500
+INFO:utils.request:响应内容: {"success":false,"message":"系统异常，请稍后重试","data":null}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/523
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjA2NzcsImV4cCI6MTc1NDYyNzg3N30.GXsUohbi7zaPPkSnH1xhuOzb7Niz8xW7JIpF3NdELws'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"任务删除成功"}

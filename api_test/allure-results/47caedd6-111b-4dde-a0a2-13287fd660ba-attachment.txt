@@ -1,0 +1,21 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"注册成功","data":null}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2pvenhqbSIsImlhdCI6MTc1NDk3NTAwNywiZXhwIjoxNzU0OTgyMjA3fQ.wmaxZD7aUJfChwkMde76ppsxaLoCTleBCIsnjZpSSRQ","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_029 - 未登录状态上传头像
+INFO:tests.test_user_auth:用例auth_029不需要验证码，跳过发送逻辑
+INFO:tests.test_user_auth:是否使用Token: False
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/upload/avatar
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 403
+INFO:utils.request:响应内容: 
+INFO:tests.test_user_auth:关闭文件句柄: file
+INFO:tests.test_user_auth:清理测试用户: test_jozxjm@example.com

@@ -1,0 +1,21 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"注册成功","data":null}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2Z3bGRhbyIsImlhdCI6MTc1NDk3NDk3OCwiZXhwIjoxNzU0OTgyMTc4fQ.hSYZ1U5QhzJyiucBF3O0dak2oer5TZ3RM0hN1WD40OY","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_016 - 验证码错误
+INFO:tests.test_user_auth:用例auth_016不需要验证码，跳过发送逻辑
+INFO:tests.test_user_auth:是否使用Token: True
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2Z3bGRhbyIsImlhdCI6MTc1NDk3NDk3OCwiZXhwIjoxNzU0OTgyMTc4fQ.hSYZ1U5QhzJyiucBF3O0dak2oer5TZ3RM0hN1WD40OY'}
+INFO:utils.request:响应状态码: 400
+INFO:utils.request:响应内容: {"success":false,"message":"验证码错误或已过期","data":null}
+INFO:tests.test_user_auth:清理测试用户: test_fwldao@example.com

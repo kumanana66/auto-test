@@ -1,0 +1,21 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"注册成功","data":null}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X3Vhem5xcCIsImlhdCI6MTc1NDk3NDk2NSwiZXhwIjoxNzU0OTgyMTY1fQ.J2PbgKV8AED6_8TfjRDO2p1eU8QNTwDDD2IKZJQkRag","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_009 - 密码长度超过20位
+INFO:tests.test_user_auth:用例auth_009不需要验证码，跳过发送逻辑
+INFO:tests.test_user_auth:是否使用Token: True
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X3Vhem5xcCIsImlhdCI6MTc1NDk3NDk2NSwiZXhwIjoxNzU0OTgyMTY1fQ.J2PbgKV8AED6_8TfjRDO2p1eU8QNTwDDD2IKZJQkRag'}
+INFO:utils.request:响应状态码: 400
+INFO:utils.request:响应内容: {"success":false,"message":"密码长度需在8-20位之间","data":{"password":"密码长度需在8-20位之间"}}
+INFO:tests.test_user_auth:清理测试用户: test_uaznqp@example.com

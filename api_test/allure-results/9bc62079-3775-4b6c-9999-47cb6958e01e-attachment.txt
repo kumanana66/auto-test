@@ -1,0 +1,5 @@
+INFO:tests.test_user_auth:开始执行用例: auth_019 - 密码错误登录
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 403
+INFO:utils.request:响应内容: 
