@@ -201,10 +201,10 @@ def get_chart_type_name(chart_type):
 
 if __name__ == "__main__":
     # PPT文件路径
-    ppt_path = r"D:\工作记录\【RPA】亚马逊竞对数据抓取\新-2025\数据分析报告模板.pptx"
+    ppt_path = your_ppt_path
     
     # 输出Excel文件路径
-    output_excel_path = r"D:\工作记录\【RPA】亚马逊竞对数据抓取\新-2025\数据分析报告底表.xlsx"
+    output_excel_path = your_excel_path
     
     # 执行提取
     extract_ppt_data(ppt_path, output_excel_path)
