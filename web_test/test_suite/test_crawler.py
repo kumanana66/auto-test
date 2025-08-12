@@ -52,8 +52,7 @@ class TestCrawlerTask(BaseTest):
                 self.driver.find_element(
                     By.XPATH, f"//div[contains(@class, 'el-radio-group')]//input[@value='{case['time_cycle']}']/ancestor::label"
                 ).click()
-                
-                # 提交
+
                 self.wait.until(
                     EC.element_to_be_clickable((
                         By.XPATH, "//button[contains(@class, 'el-button--primary')]//span[text()='提交']"
@@ -245,8 +244,7 @@ class TestCrawlerTask(BaseTest):
                     actual_cycle, expected_cycle,
                     f"第{row_idx}行周期不符：预期[{expected_cycle}]，实际[{actual_cycle}]"
                 )
-        
-        # 所有验证通过
+
         print(f"筛选验证通过，共验证{len(rows)}行数据")
 
     def test_04_export_data_cases(self):
