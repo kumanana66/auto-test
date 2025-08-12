@@ -1,6 +1,6 @@
 import pytest
 import allure
-import time  # 新增：用于轮询等待
+import time
 from utils.case_loader import CaseLoader
 from utils.request import Request
 from utils.test_utils import assert_response, preprocess_request
