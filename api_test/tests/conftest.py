@@ -36,12 +36,12 @@ def small_png_image():
     
     yield tmp_path  # 提供文件路径给测试用例
     
-    # 确保文件被删除（即使测试失败）
+    # 确保文件被删除
     if os.path.exists(tmp_path):
         try:
             os.remove(tmp_path)
         except PermissionError:
-            # 强制删除（针对Windows系统）
+            # 强制删除
             if os.name == 'nt':
                 os.system(f"del /f {tmp_path}")
 
