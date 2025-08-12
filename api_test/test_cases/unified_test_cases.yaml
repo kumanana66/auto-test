@@ -1,4 +1,3 @@
-# test_cases\unified_test_cases.yaml
 # 用户认证模块
 user_auth:
   - case_id: auth_001
