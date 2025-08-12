@@ -11,7 +11,7 @@ def update_ppt_from_excel(ppt_path, excel_path):
             print("文件不存在，终止操作")
             return
 
-        # 读取Excel数据（保留content，供文本框使用）
+        # 读取Excel数据
         wb = load_workbook(excel_path, data_only=True)
         ws = wb["汇总"]
         data_index = {}
@@ -39,7 +39,7 @@ def update_ppt_from_excel(ppt_path, excel_path):
                 data_index[slide_num][shape_name] = []
             data_index[slide_num][shape_name].append({
                 "type": shape_type,
-                "content": content,  # 保留content，供文本框使用
+                "content": content,
                 "data": clean_data
             })
             print(f"  加载数据：幻灯片{slide_num}，形状{shape_name}，类型{shape_type}")
@@ -72,7 +72,7 @@ def update_ppt_from_excel(ppt_path, excel_path):
                 updates = shape_data[shape_name]
                 print(f"  更新形状：{shape_name}（{len(updates)}条数据）")
 
-                # 2. 表格更新（仅用data，忽略content）
+                # 2. 表格更新
                 if shape.HasTable:
                     table = shape.Table
                     ppt_rows = table.Rows.Count
@@ -81,20 +81,20 @@ def update_ppt_from_excel(ppt_path, excel_path):
 
                     for data_idx, update in enumerate(updates):
                         if "表格" in update["type"] and (data_idx + 1) <= ppt_rows:
-                            row_idx = data_idx + 1  # PPT表格行索引从1开始
+                            row_idx = data_idx + 1
                             for col_idx in range(min(len(update["data"]), ppt_cols)):
-                                table_col = col_idx + 1  # 列索引从1开始
+                                table_col = col_idx + 1
                                 table.Cell(row_idx, table_col).Shape.TextFrame.TextRange.Text = update["data"][col_idx]
                             print(f"    表格行{row_idx}更新完成：{update['data']}")
 
-                # 1. 文本框更新（依赖content数据）
+                # 1. 文本框更新
                 elif shape.HasTextFrame and shape.TextFrame.HasText:
                     for update in updates:
                         if "文本框" in update["type"].replace(" ", ""):  # 兼容带空格的类型
                             shape.TextFrame.TextRange.Text = update["content"]
                             print(f"    文本框更新：{update['content'][:50]}...")
 
-                # 3. 图表更新（仅用data，忽略content）
+                # 3. 图表更新
                 elif shape.HasChart:
                     chart = shape.Chart
                     try:
@@ -170,6 +170,6 @@ def update_ppt_from_excel(ppt_path, excel_path):
 
 
 if __name__ == "__main__":
-    ppt_path = r"D:\工作记录\【RPA】亚马逊竞对数据抓取\新-2025\数据分析报告模板.pptx"
-    excel_path = r"D:\工作记录\【RPA】亚马逊竞对数据抓取\新-2025\数据分析报告底表.xlsx"
+    ppt_path = your_ppt_path
+    excel_path = your_excel_path
     update_ppt_from_excel(ppt_path, excel_path)
