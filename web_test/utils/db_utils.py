@@ -6,8 +6,8 @@ class DBUtils:
         # 数据库连接配置，根据实际环境修改
         self.db_config = {
             'host': 'localhost',
-            'user': 'root',
-            'password': '200166',
+            'user': your_user_name,
+            'password': your_password,
             'database': 'spring_demo',
             'port': 3306,
             'charset': 'utf8mb4'
