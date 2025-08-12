@@ -1,0 +1,21 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"注册成功","data":null}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2ZoZ2VyciIsImlhdCI6MTc1NDk3NDk2NywiZXhwIjoxNzU0OTgyMTY3fQ.OD90wuZfrfbKOG39HbKx4Fe5qPakKmM2wx4QrypBFVM","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_010 - 密码仅包含小写字母
+INFO:tests.test_user_auth:用例auth_010不需要验证码，跳过发送逻辑
+INFO:tests.test_user_auth:是否使用Token: True
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2ZoZ2VyciIsImlhdCI6MTc1NDk3NDk2NywiZXhwIjoxNzU0OTgyMTY3fQ.OD90wuZfrfbKOG39HbKx4Fe5qPakKmM2wx4QrypBFVM'}
+INFO:utils.request:响应状态码: 400
+INFO:utils.request:响应内容: {"success":false,"message":"密码强度不足，需至少包含大小写字母和数字中的两类","data":null}
+INFO:tests.test_user_auth:清理测试用户: test_fhgerr@example.com

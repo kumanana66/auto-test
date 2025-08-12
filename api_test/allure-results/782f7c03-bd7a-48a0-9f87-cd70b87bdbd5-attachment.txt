@@ -1,0 +1,5 @@
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:103 开始执行用例: auth_017 - 正确账号密码登录
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MzY4MTgsImV4cCI6MTc1NDY0NDAxOH0.YuXPEIOmFKSvqD_VfTk4Bj4a6eTLi_5wPjJ5astFa4E","expiresIn":7200}}

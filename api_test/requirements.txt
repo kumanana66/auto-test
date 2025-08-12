@@ -1,0 +1,7 @@
+requests
+pytest
+pytest-html
+allure-pytest
+PyMySQL
+Pillow
+PyYAML

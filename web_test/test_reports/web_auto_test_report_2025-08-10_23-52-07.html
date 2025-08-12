@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web自动化测试报告</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Web自动化测试报告</h2>
+                <p class='attribute'><strong>Start Time: </strong>2025-08-10 23:52:07</p>
+                <p class='attribute'><strong>Duration: </strong>77.09 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 11, Pass: 10, Fail: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_auth.TestUserAuth.test_login_cases</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_login_cases</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td colspan="3">
+
+                                <table class='table table-hover table-responsive'>
+                                    <tbody>
+                                        <tr class='success'>
+                                            <td class="col-xs-10">test_login_cases (case={'type': 'login', 'username': 'admin1155', 'password': 'admin1155', 'expected_message': '登录成功'})</td>
+                                            <td class="col-xs-1">
+                                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                            </td>
+                                            <td class="col-xs-1">
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr class='success'>
+                                            <td class="col-xs-10">test_login_cases (case={'type': 'login', 'username': 'admin1166', 'password': 'admin1155', 'expected_message': '用户名或密码错误，请稍后再试'})</td>
+                                            <td class="col-xs-1">
+                                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                            </td>
+                                            <td class="col-xs-1">
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr class='success'>
+                                            <td class="col-xs-10">test_login_cases (case={'type': 'login', 'username': 'admin1155', 'password': 'admin1166', 'expected_message': '用户名或密码错误，请稍后再试'})</td>
+                                            <td class="col-xs-1">
+                                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                            </td>
+                                            <td class="col-xs-1">
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 1 -- Duration: 0 ms
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_auth.TestUserAuth.test_register_cases</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='danger'>
+                            <td class="col-xs-10">test_register_cases</td>
+                            <td class="col-xs-1">
+                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td colspan="3">
+
+                                <table class='table table-hover table-responsive'>
+                                    <tbody>
+                                        <tr class='danger'>
+                                            <td class="col-xs-10">com', 'password': 'Test123456', 'expected_message': '注册成功', 'expected_url_contains': '/login'})</td>
+                                            <td class="col-xs-1">
+                                                <span class="label label-danger" style="display:block;width:40px;">Fail</span>
+                                            </td>
+                                            <td class="col-xs-1">
+                                                <button class="btn btn-default btn-xs">View</button>
+                                            </td>
+                                        </tr>
+                                        <tr style="display:none;">
+                                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7dea0ab35+2818197]
+	GetHandleVerifier [0x0x7ff7de76dff0+79184]
+	(No symbol) [0x0x7ff7de529f8a]
+	(No symbol) [0x0x7ff7de5804ba]
+	(No symbol) [0x0x7ff7de58076c]
+	(No symbol) [0x0x7ff7de5d40c7]
+	(No symbol) [0x0x7ff7de5a88af]
+	(No symbol) [0x0x7ff7de5d0ef7]
+	(No symbol) [0x0x7ff7de5a8643]
+	(No symbol) [0x0x7ff7de571461]
+	(No symbol) [0x0x7ff7de5721f3]
+	GetHandleVerifier [0x0x7ff7dea35aed+2994253]
+	GetHandleVerifier [0x0x7ff7dea2ff1d+2970749]
+	GetHandleVerifier [0x0x7ff7dea4eef2+3097682]
+	GetHandleVerifier [0x0x7ff7de7881ae+186126]
+	GetHandleVerifier [0x0x7ff7de78f5ef+215887]
+	GetHandleVerifier [0x0x7ff7de7768f4+114260]
+	GetHandleVerifier [0x0x7ff7de776aa9+114697]
+	GetHandleVerifier [0x0x7ff7de75d6a8+11272]
+	BaseThreadInitThunk [0x0x7ff8236ae8d7+23]
+	RtlUserThreadStart [0x0x7ff82563c34c+44]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "D:\工作记录\项目说明\web_test\test_suite\test_auth.py", line 50, in test_register_cases
+    notification = self.wait_for_notification(case["expected_message"])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\工作记录\项目说明\web_test\test_suite\base_test.py", line 121, in wait_for_notification
+    notification = self.get_notification()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\工作记录\项目说明\web_test\test_suite\base_test.py", line 108, in get_notification
+    notification = self.wait.until(
+                   ^^^^^^^^^^^^^^^^
+  File "D:\Anaconda3\Lib\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7dea0ab35+2818197]
+	GetHandleVerifier [0x0x7ff7de76dff0+79184]
+	(No symbol) [0x0x7ff7de529f8a]
+	(No symbol) [0x0x7ff7de5804ba]
+	(No symbol) [0x0x7ff7de58076c]
+	(No symbol) [0x0x7ff7de5d40c7]
+	(No symbol) [0x0x7ff7de5a88af]
+	(No symbol) [0x0x7ff7de5d0ef7]
+	(No symbol) [0x0x7ff7de5a8643]
+	(No symbol) [0x0x7ff7de571461]
+	(No symbol) [0x0x7ff7de5721f3]
+	GetHandleVerifier [0x0x7ff7dea35aed+2994253]
+	GetHandleVerifier [0x0x7ff7dea2ff1d+2970749]
+	GetHandleVerifier [0x0x7ff7dea4eef2+3097682]
+	GetHandleVerifier [0x0x7ff7de7881ae+186126]
+	GetHandleVerifier [0x0x7ff7de78f5ef+215887]
+	GetHandleVerifier [0x0x7ff7de7768f4+114260]
+	GetHandleVerifier [0x0x7ff7de776aa9+114697]
+	GetHandleVerifier [0x0x7ff7de75d6a8+11272]
+	BaseThreadInitThunk [0x0x7ff8236ae8d7+23]
+	RtlUserThreadStart [0x0x7ff82563c34c+44]
+
+</p>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr class='success'>
+                                            <td class="col-xs-10">com', 'password': 'Test123456', 'expected_message': '用户名长度需在6-20位之间'})</td>
+                                            <td class="col-xs-1">
+                                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                            </td>
+                                            <td class="col-xs-1">
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr class='success'>
+                                            <td class="col-xs-10">com', 'password': 'testpassword', 'expected_message': '密码强度不足，需至少包含大小写字母和数字中的两类'})</td>
+                                            <td class="col-xs-1">
+                                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                            </td>
+                                            <td class="col-xs-1">
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Fail: 1 -- Duration: 22.93 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_auth.TestUserAuth.test_upload_avatar_cases</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_upload_avatar_cases</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td colspan="3">
+
+                                <table class='table table-hover table-responsive'>
+                                    <tbody>
+                                        <tr class='success'>
+                                            <td class="col-xs-10">png', 'expected_message': '头像更新成功'})</td>
+                                            <td class="col-xs-1">
+                                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                            </td>
+                                            <td class="col-xs-1">
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 1 -- Duration: 0 ms
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_crawler.TestCrawlerTask.test_create_task_cases</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_create_task_cases</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td colspan="3">
+
+                                <table class='table table-hover table-responsive'>
+                                    <tbody>
+                                        <tr class='success'>
+                                            <td class="col-xs-10">test_create_task_cases (case={'type': 'task_create', 'process_name': '自动化测试任务', 'asin_list': 'B08XJ8J7SZ,B08LGD78Q5', 'required_info': ['price', 'review'], 'platform': 'Amazon', 'time_cycle': 'daily', 'expected_message': '爬虫任务创建成功', 'expected_url_contains': '/crawler/tasks'})</td>
+                                            <td class="col-xs-1">
+                                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                            </td>
+                                            <td class="col-xs-1">
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr class='success'>
+                                            <td class="col-xs-10">test_create_task_cases (case={'type': 'task_create', 'process_name': '自动化测试任务', 'asin_list': 'B08XJ8J7SZ B08LGD78Q5', 'required_info': ['price', 'review'], 'platform': 'Amazon', 'time_cycle': 'daily', 'expected_message': '保存任务失败，请稍后重试'})</td>
+                                            <td class="col-xs-1">
+                                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                            </td>
+                                            <td class="col-xs-1">
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 1 -- Duration: 0 ms
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_crawler.TestCrawlerTask.test_export_data_cases</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_export_data_cases</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td colspan="3">
+
+                                <table class='table table-hover table-responsive'>
+                                    <tbody>
+                                        <tr class='success'>
+                                            <td class="col-xs-10">test_export_data_cases (case={'task_name_contains': 'Amazon_Matress_0722', 'data_type': 'price-rank', 'expected_message': '数据导出成功', 'expected_file_contains': 'Amazon_Matress_0722_价格与排名数据'})</td>
+                                            <td class="col-xs-1">
+                                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                            </td>
+                                            <td class="col-xs-1">
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 1 -- Duration: 0 ms
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_crawler.TestCrawlerTask.test_task_status_cases</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_task_status_cases</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td colspan="3">
+
+                                <table class='table table-hover table-responsive'>
+                                    <tbody>
+                                        <tr class='success'>
+                                            <td class="col-xs-10">test_task_status_cases (case={'type': 'task_status', 'task_name_contains': '自动化测试任务', 'expected_status': '暂停', 'expected_after_status': '恢复', 'expected_message': '任务已暂停'})</td>
+                                            <td class="col-xs-1">
+                                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                            </td>
+                                            <td class="col-xs-1">
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr class='success'>
+                                            <td class="col-xs-10">test_task_status_cases (case={'type': 'task_status', 'task_name_contains': '自动化测试任务', 'expected_status': '恢复', 'expected_after_status': '暂停', 'expected_message': '任务已恢复执行'})</td>
+                                            <td class="col-xs-1">
+                                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                            </td>
+                                            <td class="col-xs-1">
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 1 -- Duration: 0 ms
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_auth.TestUserAuth</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_login_cases</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Token有效，复用登录状态
+当前用例：{'type': 'login', 'username': 'admin1155', 'password': 'admin1155', 'expected_message': '登录成功'}
+提示消息：登录成功
+当前用例：{'type': 'login', 'username': 'admin1166', 'password': 'admin1155', 'expected_message': '用户名或密码错误，请稍后再试'}
+提示消息：用户名或密码错误，请稍后再试
+当前用例：{'type': 'login', 'username': 'admin1155', 'password': 'admin1166', 'expected_message': '用户名或密码错误，请稍后再试'}
+提示消息：用户名或密码错误，请稍后再试
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_upload_avatar_cases</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Token有效，复用登录状态
+当前用例：{'type': 'upload_avatar', 'file_path': 'D:/工作记录/项目说明/test_avatar.png', 'expected_message': '头像更新成功'}
+提示消息：头像更新成功
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 2, Pass: 2 -- Duration: 15.52 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>test_crawler.TestCrawlerTask</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_create_task_cases</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Token有效，复用登录状态
+当前用例：{'type': 'task_create', 'process_name': '自动化测试任务', 'asin_list': 'B08XJ8J7SZ,B08LGD78Q5', 'required_info': ['price', 'review'], 'platform': 'Amazon', 'time_cycle': 'daily', 'expected_message': '爬虫任务创建成功', 'expected_url_contains': '/crawler/tasks'}
+提示消息：登录成功
+提示消息：爬虫任务创建成功
+当前用例：{'type': 'task_create', 'process_name': '自动化测试任务', 'asin_list': 'B08XJ8J7SZ B08LGD78Q5', 'required_info': ['price', 'review'], 'platform': 'Amazon', 'time_cycle': 'daily', 'expected_message': '保存任务失败，请稍后重试'}
+提示消息：登录成功
+提示消息：保存任务失败，请稍后重试
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_export_data_cases</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Token有效，复用登录状态
+当前用例：{'task_name_contains': 'Amazon_Matress_0722', 'data_type': 'price-rank', 'expected_message': '数据导出成功', 'expected_file_contains': 'Amazon_Matress_0722_价格与排名数据'}
+提示消息：登录成功
+</p>
+                            </td>
+                        </tr>
+                        <tr class='success'>
+                            <td class="col-xs-10">test_task_status_cases</td>
+                            <td class="col-xs-1">
+                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p>Token有效，复用登录状态
+当前用例：{'type': 'task_status', 'task_name_contains': '自动化测试任务', 'expected_status': '暂停', 'expected_after_status': '恢复', 'expected_message': '任务已暂停'}
+提示消息：登录成功
+提示消息：任务已暂停
+当前用例：{'type': 'task_status', 'task_name_contains': '自动化测试任务', 'expected_status': '恢复', 'expected_after_status': '暂停', 'expected_message': '任务已恢复执行'}
+提示消息：登录成功
+提示消息：任务已恢复执行
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 3, Pass: 3 -- Duration: 38.64 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html

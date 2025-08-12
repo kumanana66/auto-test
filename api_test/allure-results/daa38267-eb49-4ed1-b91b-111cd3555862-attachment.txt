@@ -1,0 +1,19 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2MzYsImV4cCI6MTc1NDk3ODgzNn0.IUpjG8nKg5zwWqdGK5mak1qHxGrfPfM-pprnsKTKWZ8","expiresIn":7200}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2MzYsImV4cCI6MTc1NDk3ODgzNn0.IUpjG8nKg5zwWqdGK5mak1qHxGrfPfM-pprnsKTKWZ8'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"任务创建成功","data":{"id":899,"processName":"测试任务_None","asinList":"B08XJ8J7SZ","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-12T12:07:16.4334441","updateTime":"2025-08-12T12:07:16.4334441","status":"ACTIVE","userId":4,"username":"admin1155"}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2MzYsImV4cCI6MTc1NDk3ODgzNn0.IUpjG8nKg5zwWqdGK5mak1qHxGrfPfM-pprnsKTKWZ8'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"任务创建成功","data":{"id":900,"processName":"测试任务_7r5lgb","asinList":"B08XJ8J7SZ,B08LGD78Q5","requiredInfo":["price","review"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-12T12:07:16.4695945","updateTime":"2025-08-12T12:07:16.4695945","status":"ACTIVE","userId":4,"username":"admin1155"}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/899
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2MzYsImV4cCI6MTc1NDk3ODgzNn0.IUpjG8nKg5zwWqdGK5mak1qHxGrfPfM-pprnsKTKWZ8'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"任务删除成功"}

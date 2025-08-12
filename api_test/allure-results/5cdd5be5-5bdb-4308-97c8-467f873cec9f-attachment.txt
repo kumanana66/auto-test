@@ -1,0 +1,9 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODY5NzgsImV4cCI6MTc1Mzk5NDE3OH0.4LBW3H6VNE_6M1SVTcQRh-oSx3jJ7Ywc-gxjYXBnKEE","expiresIn":7200}}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/crawler/tasks
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODY5NzgsImV4cCI6MTc1Mzk5NDE3OH0.4LBW3H6VNE_6M1SVTcQRh-oSx3jJ7Ywc-gxjYXBnKEE'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"任务创建成功","data":{"id":241,"processName":"亚马逊监控","asinList":"B08XJ8J7SZ,B08LGD78Q5","requiredInfo":null,"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-01T02:36:18.4920633","updateTime":"2025-08-01T02:36:18.4920633","status":"ACTIVE","userId":4,"username":"admin1155"}}

@@ -1,0 +1,23 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/send-verify-code
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/register
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"注册成功","data":null}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2JsamV6aiIsImlhdCI6MTc1NDk3NTAwNiwiZXhwIjoxNzU0OTgyMjA2fQ._-s0T4VmWM1LFYqnGYGGt66K1fT35d8HE1kyUsADZz4","expiresIn":7200}}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:79 开始执行用例: auth_028 - 上传非图片格式文件
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:116 用例auth_028不需要验证码，跳过发送逻辑
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:120 是否使用Token: True
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/upload/avatar
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2JsamV6aiIsImlhdCI6MTc1NDk3NTAwNiwiZXhwIjoxNzU0OTgyMjA2fQ._-s0T4VmWM1LFYqnGYGGt66K1fT35d8HE1kyUsADZz4'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":false,"message":"仅支持JPG、PNG格式的图片","data":null}
+[1m[31mERROR   [0m tests.test_user_auth:test_user_auth.py:143 用例断言失败: 状态码不符：预期403，实际200，完整response：{"success":false,"message":"仅支持JPG、PNG格式的图片","data":null}
+assert 200 == 403
+ +  where 200 = <Response [200]>.status_code

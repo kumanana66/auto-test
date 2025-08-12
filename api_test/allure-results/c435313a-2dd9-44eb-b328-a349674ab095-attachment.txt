@@ -1,0 +1,19 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjA4NTAsImV4cCI6MTc1NDYyODA1MH0.Y4Fu4LgwD0GzI7fpj-54ke404e5T1rKZjUMSOqkUhrQ","expiresIn":7200}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjA4NTAsImV4cCI6MTc1NDYyODA1MH0.Y4Fu4LgwD0GzI7fpj-54ke404e5T1rKZjUMSOqkUhrQ'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"任务创建成功","data":{"id":536,"processName":"测试任务_None","asinList":"B08XJ8J7SZ","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-08T10:40:50.4661486","updateTime":"2025-08-08T10:40:50.4661486","status":"ACTIVE","userId":4,"username":"admin1155"}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjA4NTAsImV4cCI6MTc1NDYyODA1MH0.Y4Fu4LgwD0GzI7fpj-54ke404e5T1rKZjUMSOqkUhrQ'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"任务创建成功","data":{"id":537,"processName":"测试任务_luz1gn","asinList":"B08XJ8J7SZ,B08LGD78Q5","requiredInfo":["price","review"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-08T10:40:50.60938","updateTime":"2025-08-08T10:40:50.60938","status":"ACTIVE","userId":4,"username":"admin1155"}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/536
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ2MjA4NTAsImV4cCI6MTc1NDYyODA1MH0.Y4Fu4LgwD0GzI7fpj-54ke404e5T1rKZjUMSOqkUhrQ'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"任务删除成功"}

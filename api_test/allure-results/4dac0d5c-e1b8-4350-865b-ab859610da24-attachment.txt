@@ -1,0 +1,20 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/send-verify-code
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/register
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"注册成功","data":null}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2l1Y3hueCIsImlhdCI6MTc1NDk3NDk4MCwiZXhwIjoxNzU0OTgyMTgwfQ.YJAV0Dv09WO5-8qgFj8mQ2BljbskL9XZPXZJA0xHrk8","expiresIn":7200}}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:79 开始执行用例: auth_017 - 正确账号密码登录
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:116 用例auth_017不需要验证码，跳过发送逻辑
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:120 是否使用Token: True
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2l1Y3hueCIsImlhdCI6MTc1NDk3NDk4MCwiZXhwIjoxNzU0OTgyMTgwfQ.YJAV0Dv09WO5-8qgFj8mQ2BljbskL9XZPXZJA0xHrk8'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzQ5ODEsImV4cCI6MTc1NDk4MjE4MX0.Ja6XE2aLNazorILeyoc93qLavY7axnRd7gZPOCzKYK0","expiresIn":7200}}

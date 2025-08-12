@@ -1,0 +1,598 @@
+# test_cases\unified_test_cases.yaml
+# 用户认证模块
+user_auth:
+  - case_id: auth_001
+    name: 用户注册成功
+    method: POST
+    url: /auth/register
+    json:
+      username: "test_user_{random}"
+      password: "Test123456"
+      email: "test_{random}@example.com"
+      verifyCode: "{verify_code}"
+    expected_code: 200
+    expected_success: true
+    expected_message: "注册成功"
+    setup: "需要先获取邮箱验证码"
+    teardown: "删除测试用户"
+
+  - case_id: auth_002
+    name: 用户名长度为6位（最小值）
+    method: POST
+    url: /auth/register
+    json:
+      username: "test01"
+      password: "Test123456"
+      email: "test_{random}@example.com"
+      verifyCode: "{verify_code}"
+    expected_code: 200
+    expected_success: true
+    expected_message: "注册成功"
+
+  - case_id: auth_003
+    name: 用户名长度为20位（最大值）
+    method: POST
+    url: /auth/register
+    json:
+      username: "test0000000000000001"
+      password: "Test123456"
+      email: "test_{random}@example.com"
+      verifyCode: "{verify_code}"
+    expected_code: 200
+    expected_success: true
+    expected_message: "注册成功"
+
+  - case_id: auth_004
+    name: 用户名长度不足6位
+    method: POST
+    url: /auth/register
+    json:
+      username: "test1"
+      password: "Test123456"
+      email: "test_{random}@example.com"
+      verifyCode: "123"
+    expected_code: 400
+    expected_success: false
+    expected_message: "用户名长度需在6-20位之间"
+
+  - case_id: auth_005
+    name: 用户名长度超过20位
+    method: POST
+    url: /auth/register
+    json:
+      username: "test00000000000000001"
+      password: "Test123456"
+      email: "test_{random}@example.com"
+      verifyCode: "123"
+    expected_code: 400
+    expected_success: false
+    expected_message: "用户名长度需在6-20位之间"
+
+  - case_id: auth_006
+    name: 用户名包含特殊符号
+    method: POST
+    url: /auth/register
+    json:
+      username: "test@1"
+      password: "Test123456"
+      email: "test_{random}@example.com"
+      verifyCode: "123"
+    expected_code: 400
+    expected_success: false
+    expected_message: "用户名格式无效（仅支持中文、英文、数字、下划线）"
+
+  - case_id: auth_007
+    name: 用户名已被注册
+    method: POST
+    url: /auth/register
+    json:
+      username: "admin1155"
+      password: "Test123456"
+      email: "test_{random}@example.com"
+      verifyCode: "123"
+    expected_code: 400
+    expected_success: false
+    expected_message: "用户名已被注册"
+
+  - case_id: auth_008
+    name: 密码长度不足8位
+    method: POST
+    url: /auth/register
+    json:
+      username: "test_{random}"
+      password: "Test123"
+      email: "test_{random}@example.com"
+      verifyCode: "123"
+    expected_code: 400
+    expected_success: false
+    expected_message: "密码长度需在8-20位之间"
+
+  - case_id: auth_009
+    name: 密码长度超过20位
+    method: POST
+    url: /auth/register
+    json:
+      username: "test_{random}"
+      password: "Test12345678910111213"
+      email: "test_{random}@example.com"
+      verifyCode: "123"
+    expected_code: 400
+    expected_success: false
+    expected_message: "密码长度需在8-20位之间"
+
+  - case_id: auth_010
+    name: 密码仅包含小写字母
+    method: POST
+    url: /auth/register
+    json:
+      username: "test_{random}"
+      password: "testtest"
+      email: "test_{random}@example.com"
+      verifyCode: "123"
+    expected_code: 400
+    expected_success: false
+    expected_message: "密码强度不足，需至少包含大小写字母和数字中的两类"
+
+  - case_id: auth_011
+    name: 密码仅包含大写字母
+    method: POST
+    url: /auth/register
+    json:
+      username: "test_{random}"
+      password: "TESTTEST"
+      email: "test_{random}@example.com"
+      verifyCode: "123"
+    expected_code: 400
+    expected_success: false
+    expected_message: "密码强度不足，需至少包含大小写字母和数字中的两类"
+
+  - case_id: auth_012
+    name: 密码仅包含数字
+    method: POST
+    url: /auth/register
+    json:
+      username: "test_{random}"
+      password: "123456789"
+      email: "test_{random}@example.com"
+      verifyCode: "123"
+    expected_code: 400
+    expected_success: false
+    expected_message: "密码强度不足，需至少包含大小写字母和数字中的两类"
+
+  - case_id: auth_013
+    name: 密码与确认密码不一致
+    method: POST
+    url: /auth/register
+    json:
+      username: "test_{random}"
+      password: "Test123"
+      confirmPassword: "Test124"
+      email: "test_{random}@example.com"
+      verifyCode: "123"
+    expected_code: 400
+    expected_success: false
+    expected_message: "两次输入的密码不一致"
+
+  - case_id: auth_014
+    name: 邮箱格式不正确（缺少@）
+    method: POST
+    url: /auth/register
+    json:
+      username: "test_{random}"
+      password: "Test123456"
+      email: "invalid-email"
+      verifyCode: "123"
+    expected_code: 400
+    expected_success: false
+    expected_message: "请输入正确的邮箱格式"
+
+  - case_id: auth_015
+    name: 验证码过期
+    method: POST
+    url: /auth/register
+    json:
+      username: "test_{random}"
+      password: "Test123456"
+      email: "test_{random}@example.com"
+      verifyCode: "expired_code"
+    expected_code: 400
+    expected_success: false
+    expected_message: "验证码错误或已过期"
+
+  - case_id: auth_016
+    name: 验证码错误
+    method: POST
+    url: /auth/register
+    json:
+      username: "test_{random}"
+      password: "Test123456"
+      email: "test_{random}@example.com"
+      verifyCode: "654321"
+    expected_code: 400
+    expected_success: false
+    expected_message: "验证码错误或已过期"
+
+  - case_id: auth_017
+    name: 正确账号密码登录
+    method: POST
+    url: /auth/login
+    json:
+      username: "admin1155"
+      password: "admin1155"
+    expected_code: 200
+    expected_success: true
+    expected_message: "登录成功"
+    extract:
+      token: "$.data.token"
+
+  - case_id: auth_018
+    name: 用户名不存在登录
+    method: POST
+    url: /auth/login
+    json:
+      username: "nonexistent"
+      password: "Test123456"
+    expected_code: 401
+    expected_success: false
+    expected_message: "用户名或密码错误，请稍后再试"
+
+  - case_id: auth_019
+    name: 密码错误登录
+    method: POST
+    url: /auth/login
+    json:
+      username: "admin1155"
+      password: "Wrong123"
+    expected_code: 403
+    expected_success: false
+    expected_message: "密码错误，还可重试4次"
+
+  - case_id: auth_020
+    name: 账号锁定后登录
+    method: POST
+    url: /auth/login
+    json:
+      username: "lockeduser"
+      password: "Test123456"
+    expected_code: 401
+    expected_success: false
+    expected_message: "账号已锁定，请30分钟后再试"
+
+  - case_id: auth_021
+    name: 旧密码正确+新密码符合强度要求
+    method: PUT
+    url: /auth/userinfo
+    headers:
+      Authorization: "Bearer {token}"
+    json:
+      oldPassword: "admin1155"
+      newPassword: "NewTest789"
+      securityEmail: "admin1155@example.com"
+      verificationCode: "{verify_code}"
+    expected_code: 200
+    expected_success: true
+    expected_message: "个人信息更新成功"
+
+  - case_id: auth_022
+    name: 旧密码错误
+    method: PUT
+    url: /auth/userinfo
+    headers:
+      Authorization: "Bearer {token}"
+    json:
+      oldPassword: "Wrong123"
+      newPassword: "NewTest123"
+      securityEmail: "admin1155@example.com"
+      verificationCode: "{verify_code}"
+    expected_code: 400
+    expected_success: false
+    expected_message: "当前密码不正确"
+
+  - case_id: auth_023
+    name: 新密码与旧密码相同
+    method: PUT
+    url: /auth/userinfo
+    headers:
+      Authorization: "Bearer {token}"
+    json:
+      oldPassword: "admin1155"
+      newPassword: "admin1155"
+      securityEmail: "admin1155@example.com"
+      verificationCode: "{verify_code}"
+    expected_code: 400
+    expected_success: false
+    expected_message: "新密码不能与当前密码相同"
+
+  - case_id: auth_024
+    name: 上传2MB以内的JPG图片
+    method: POST
+    url: /auth/upload/avatar
+    headers:
+      Authorization: "Bearer {token}"
+      Content-Type: "multipart/form-data"
+    files:
+      file: "test_avatar.jpg"
+    expected_code: 200
+    expected_success: true
+    expected_content_type: "application/json"
+
+  - case_id: auth_025
+    name: 上传超过2MB的JPG图片
+    method: POST
+    url: /auth/upload/avatar
+    headers:
+      Authorization: "Bearer {token}"
+      Content-Type: "multipart/form-data"
+    files:
+      file: "large_avatar.jpg"
+    expected_code: 403
+    expected_success: false
+    expected_message: "文件大小不能超过2MB"
+
+  - case_id: auth_026
+    name: 上传2MB以内的PNG图片
+    method: POST
+    url: /auth/upload/avatar
+    headers:
+      Authorization: "Bearer {token}"
+      Content-Type: "multipart/form-data"
+    files:
+      file: "test_avatar.png"
+    expected_code: 200
+    expected_success: true
+    expected_content_type: "application/json"
+
+  - case_id: auth_027
+    name: 上传超过2MB的PNG图片
+    method: POST
+    url: /auth/upload/avatar
+    headers:
+      Authorization: "Bearer {token}"
+      Content-Type: "multipart/form-data"
+    files:
+      file: "large_avatar.png"
+    expected_code: 403
+    expected_success: false
+    expected_message: "文件大小不能超过2MB"
+
+  - case_id: auth_028
+    name: 上传非图片格式文件
+    method: POST
+    url: /auth/upload/avatar
+    headers:
+      Authorization: "Bearer {token}"
+      Content-Type: "multipart/form-data"
+    files:
+      file: "test_file.txt"
+    expected_code: 403
+    expected_success: false
+    expected_message: "仅支持JPG、PNG格式的图片"
+
+  - case_id: auth_029
+    name: 未登录状态上传头像
+    method: POST
+    url: /auth/upload/avatar
+    headers:
+      Content-Type: "multipart/form-data"
+    files:
+      file: "test_avatar.png"
+    expected_code: 403
+    expected_success: false
+
+# 爬虫任务模块
+crawler_tasks:
+  - case_id: task_001
+    name: 创建爬虫任务成功
+    method: POST
+    url: /crawler/tasks
+    headers:
+      Authorization: "Bearer {token}"
+    json:
+      processName: "测试任务_{random}"
+      asinList: "B08XJ8J7SZ,B08LGD78Q5"
+      requiredInfo: ["price", "review"]
+      platform: "Amazon"
+      timeCycle: "daily"
+    expected_code: 200
+    expected_success: true
+    expected_message: "任务创建成功"
+    extract:
+      task_id: "$.data.id"
+
+  - case_id: task_002
+    name: ASIN列表格式错误
+    method: POST
+    url: /crawler/tasks
+    headers:
+      Authorization: "Bearer {token}"
+    json:
+      processName: "格式错误测试"
+      asinList: "B08XJ8J7SZ B08LGD78Q5"
+      requiredInfo: ["price"]
+      platform: "Amazon"
+      timeCycle: "daily"
+    expected_code: 400
+    expected_success: false
+    expected_message: "ASIN列表格式错误，请使用逗号分隔"
+
+  - case_id: task_003
+    name: ASIN列表为空
+    method: POST
+    url: /crawler/tasks
+    headers:
+      Authorization: "Bearer {token}"
+    json:
+      processName: "亚马逊监控"
+      asinList: ""
+      requiredInfo: ["price"]
+      platform: "Amazon"
+      timeCycle: "daily"
+    expected_code: 400
+    expected_success: false
+    expected_message: "ASIN列表不能为空"
+
+  - case_id: task_004
+    name: 所需信息未选择
+    method: POST
+    url: /crawler/tasks
+    headers:
+      Authorization: "Bearer {token}"
+    json:
+      processName: "亚马逊监控"
+      asinList: "B08XJ8J7SZ,B08LGD78Q5"
+      platform: "Amazon"
+      timeCycle: "daily"
+    expected_code: 400
+    expected_success: false
+    expected_message: "请至少选择一项所需信息"
+
+  - case_id: task_005
+    name: 平台未选择
+    method: POST
+    url: /crawler/tasks
+    headers:
+      Authorization: "Bearer {token}"
+    json:
+      processName: "亚马逊监控"
+      asinList: "B08XJ8J7SZ,B08LGD78Q5"
+      requiredInfo: ["price", "review"]
+      timeCycle: "daily"
+    expected_code: 400
+    expected_success: false
+    expected_message: "请选择平台"
+
+  - case_id: task_006
+    name: 周期未选择
+    method: POST
+    url: /crawler/tasks
+    headers:
+      Authorization: "Bearer {token}"
+    json:
+      processName: "亚马逊监控"
+      asinList: "B08XJ8J7SZ,B08LGD78Q5"
+      requiredInfo: ["price", "review"]
+      platform: "Amazon"
+    expected_code: 400
+    expected_success: false
+    expected_message: "请选择时间周期"
+
+  - case_id: task_007
+    name: 并发提交相同任务
+    method: POST
+    url: /crawler/tasks
+    headers:
+      Authorization: "Bearer {token}"
+    json:
+      processName: "并发测试"
+      asinList: "B000000001"
+      requiredInfo: ["price"]
+      platform: "Amazon"
+      timeCycle: "daily"
+    expected_code: 403
+    expected_success: false
+    expected_message: "任务名称已存在"
+
+  - case_id: task_008
+    name: 暂停活跃任务
+    method: POST
+    url: /crawler/tasks/{task_id}/pause
+    headers:
+      Authorization: "Bearer {token}"
+    expected_code: 200
+    expected_success: true
+    expected_message: "操作成功"
+
+  - case_id: task_009
+    name: 恢复暂停任务
+    method: POST
+    url: /crawler/tasks/{task_id}/run
+    headers:
+      Authorization: "Bearer {token}"
+    expected_code: 200
+    expected_success: true
+    expected_message: "操作成功"
+
+  - case_id: task_010
+    name: 按状态筛选任务列表
+    method: GET
+    url: /crawler/tasks
+    headers:
+      Authorization: "Bearer {token}"
+    params:
+      status: "PAUSED"
+    expected_code: 200
+    expected_success: true
+
+  - case_id: task_011
+    name: 按活跃状态+Amazon平台筛选
+    method: GET
+    url: /crawler/tasks
+    headers:
+      Authorization: "Bearer {token}"
+    params:
+      status: "ACTIVE"
+      platform: "Amazon"
+    expected_code: 200
+    expected_success: true
+
+  - case_id: task_012
+    name: 筛选不存在的任务状态
+    method: GET
+    url: /crawler/tasks
+    headers:
+      Authorization: "Bearer {token}"
+    params:
+      status: "INVALID"
+    expected_code: 200
+    expected_success: true
+    expected_message: "任务列表获取成功"
+
+  - case_id: task_013
+    name: 删除任务后验证数据
+    method: DELETE
+    url: /crawler/tasks/{task_id}
+    headers:
+      Authorization: "Bearer {token}"
+    expected_code: 200
+    expected_success: true
+    expected_message: "操作成功"
+
+  - case_id: task_014
+    name: 并发删除同一任务
+    method: DELETE
+    url: /crawler/tasks/{task_id}
+    headers:
+      Authorization: "Bearer {token}"
+    expected_code: 403
+    expected_success: false
+    expected_message: "任务已被删除"
+
+  - case_id: task_015
+    name: 导出价格排名数据
+    method: GET
+    url: /crawler/tasks/{task_id}/export
+    headers:
+      Authorization: "Bearer {token}"
+    params:
+      type: "price-rank"
+    expected_code: 200
+    expected_content_type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+
+  - case_id: task_016
+    name: 执行数据分析并下载PPT
+    method: POST
+    url: /crawler/tasks/{task_id}/analyze
+    headers:
+      Authorization: "Bearer {token}"
+    expected_code: 200
+    expected_success: true
+    expected_message: "操作成功"
+
+  - case_id: task_017
+    name: 下载分析后的PPT
+    method: GET
+    url: /crawler/tasks/{task_id}/analyze/ppt
+    headers:
+      Authorization: "Bearer {token}"
+    expected_code: 200
+    expected_content_type: "application/vnd.openxmlformats-officedocument.presentationml.presentation"

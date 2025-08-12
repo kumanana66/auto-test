@@ -1,0 +1,1 @@
+INFO:tests.test_user_auth:开始执行用例: auth_028 - 上传非图片格式文件

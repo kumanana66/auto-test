@@ -1,0 +1,138 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA","expiresIn":7200}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"任务创建成功","data":{"id":917,"processName":"测试任务_None","asinList":"B08XJ8J7SZ","requiredInfo":["price"],"platform":"Amazon","timeCycle":"daily","createTime":"2025-08-12T12:07:24.4694695","updateTime":"2025-08-12T12:07:24.4694695","status":"ACTIVE","userId":4,"username":"admin1155"}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"数据分析已启动"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"PROCESSING"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/status
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"查询状态成功","data":"COMPLETED"}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917/analyze/ppt
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: PK
+     �N�@               ppt/PK
+     �N�@               ppt/slideLayouts/PK    �N�@��8LO    !   ppt/slideLayouts/slideLayout1.xml�W�n�F��;�3")���Ȓ݋+�� kr%�_�+UJ�C� �F�Cڢ(P'H{J�SI�4���Egw��i�Ԋ��"�˝og��vfw��8��&E��uո��
+N�,��~]�s��y�RP��(�R\W'�Po7>�h'��8<@�lH�H����_�� '����8�o��$��+�WB���$����T�jiO�c��zQ��Y0LpJ�1��1��B���A�	. �[��D'9DK#cU������8TR������͓刺��}9?;埋��`�&��OH�͏�ꌎ����V+�rMa<T�fޗH��H��A>����*�l�~��xL�@��`px��`�w��\ <X,
+��ED�ǔ�2c����
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/917
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTQ5NzE2NDQsImV4cCI6MTc1NDk3ODg0NH0.sXVKezvJPP6aRgc8kb1LEz3NblZPJNv19YWPTizwncA'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"任务删除成功"}

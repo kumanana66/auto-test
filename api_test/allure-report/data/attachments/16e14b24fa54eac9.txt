@@ -1,0 +1,15 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYyMzcsImV4cCI6MTc1Mzk5MzQzN30.9y2gK5D1ey-5-tu-Gs4lHZ4F0HAPAu1k8L8hRUAxXO0","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_024 - 上传2MB以内的JPG图片
+INFO:tests.test_user_auth:是否使用Token: True
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/upload/avatar
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer '}
+INFO:utils.request:响应状态码: 403
+INFO:utils.request:响应内容: 
+ERROR:tests.test_user_auth:用例断言失败: 状态码不符：预期200，实际403，完整response：<Response [403]>
+assert 403 == 200
+ +  where 403 = <Response [403]>.status_code
+The process cannot access the file because it is being used by another process.

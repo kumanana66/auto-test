@@ -1,0 +1,1 @@
+{"total":3,"items":[{"uid":"4574d04b55e1a05bc98e0281760dbf67","name":"用户认证模块","statistic":{"failed":239,"broken":65,"skipped":0,"passed":252,"unknown":0,"total":556}},{"uid":"a434ebd9e365b2331ab6ee7f30319af0","name":"爬虫任务模块","statistic":{"failed":173,"broken":26,"skipped":0,"passed":82,"unknown":0,"total":281}}]}

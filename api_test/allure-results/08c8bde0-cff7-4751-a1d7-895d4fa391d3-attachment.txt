@@ -1,0 +1,21 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/send-verify-code
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/register
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"注册成功","data":null}
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:38 请求头: {}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X21kaHhndSIsImlhdCI6MTc1NDk3NDk3NCwiZXhwIjoxNzU0OTgyMTc0fQ.jXzxn5R-BymTlC-c_K-ADu6i-WjI_J1srjdeEc7bGEo","expiresIn":7200}}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:79 开始执行用例: auth_014 - 邮箱格式不正确（缺少@）
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:116 用例auth_014不需要验证码，跳过发送逻辑
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:120 是否使用Token: True
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/register
+[32mINFO    [0m utils.request:request.py:28 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:38 请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X21kaHhndSIsImlhdCI6MTc1NDk3NDk3NCwiZXhwIjoxNzU0OTgyMTc0fQ.jXzxn5R-BymTlC-c_K-ADu6i-WjI_J1srjdeEc7bGEo'}
+[32mINFO    [0m utils.request:request.py:53 响应状态码: 400
+[32mINFO    [0m utils.request:request.py:54 响应内容: {"success":false,"message":"请输入正确的邮箱格式","data":{"email":"请输入正确的邮箱格式"}}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:161 清理测试用户: test_mdhxgu@example.com

@@ -1,0 +1,16 @@
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/login
+[32mINFO    [0m utils.request:request.py:36 请求头: {'Content-Type': 'application/json'}
+[32mINFO    [0m utils.request:request.py:51 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:52 响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYyMDQsImV4cCI6MTc1Mzk5MzQwNH0.i26bNXxHrYV5hgDxeF24iil_SDlIg1Kwk5FLxvJP6kA","expiresIn":7200}}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:33 开始执行用例: auth_009 - 密码长度超过20位
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/send-verify-code
+[32mINFO    [0m utils.request:request.py:36 请求头: {'Content-Type': 'application/json'}
+[32mINFO    [0m utils.request:request.py:51 响应状态码: 200
+[32mINFO    [0m utils.request:request.py:52 响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:55 为注册邮箱 test_s37lwa@example.com 填充验证码: 856137
+[32mINFO    [0m tests.test_user_auth:test_user_auth.py:59 是否使用Token: True
+[32mINFO    [0m utils.request:request.py:18 请求URL: http://localhost:8080/api/auth/register
+[32mINFO    [0m utils.request:request.py:26 使用Token: eyJhbGciOi...
+[32mINFO    [0m utils.request:request.py:36 请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYyMDQsImV4cCI6MTc1Mzk5MzQwNH0.i26bNXxHrYV5hgDxeF24iil_SDlIg1Kwk5FLxvJP6kA'}
+[32mINFO    [0m utils.request:request.py:51 响应状态码: 400
+[32mINFO    [0m utils.request:request.py:52 响应内容: {"success":false,"message":"密码长度需在8-20位之间","data":null}

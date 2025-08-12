@@ -1,0 +1,1160 @@
+{
+    "user_auth": {
+        "register": {
+            "register_success": {
+                "username": "test001",
+                "email": "test@example.com",
+                "password": "Test123456",
+                "expected_message": "注册成功",
+                "expected_url_contains": "/login"
+            },
+            "register_minlen_username_success": {
+                "username": "test01",
+                "email": "test@example.com",
+                "password": "Test123456",
+                "expected_message": "注册成功",
+                "expected_url_contains": "/login"
+            },
+            "register_maxlen_username_success": {
+                "username": "test0000000000000001",
+                "email": "test@example.com",
+                "password": "Test123456",
+                "expected_message": "注册成功",
+                "expected_url_contains": "/login"
+            },
+            "register_shortlen_username_error": {
+                "username": "test1",
+                "email": "test@example.com",
+                "password": "Test123456",
+                "expected_message": "用户名长度需在6-20位之间"
+            },
+            "register_longlen_username_error": {
+                "username": "test00000000000000001",
+                "email": "test@example.com",
+                "password": "Test123456",
+                "expected_message": "用户名长度需在6-20位之间"
+            },
+            "register_special_username_error": {
+                "username": "test@",
+                "email": "test@example.com",
+                "password": "Test123456",
+                "expected_message": "用户名格式无效（仅支持中文、英文、数字、下划线）"
+            },
+            "register_password_shortlen_error": {
+                "username": "test002",
+                "email": "test2@example.com",
+                "password": "Test123",
+                "expected_message": "密码长度需在8-20位之间"
+            },
+            "register_password_longlen_error": {
+                "username": "test002",
+                "email": "test2@example.com",
+                "password": "Test12345678910111213",
+                "expected_message": "密码长度需在8-20位之间"
+            },
+            "register_password_lowercase_error": {
+                "username": "test002",
+                "email": "test2@example.com",
+                "password": "testtest",
+                "expected_message": "密码强度不足，需至少包含大小写字母和数字中的两类"
+            },
+            "register_password_uppercase_error": {
+                "username": "test002",
+                "email": "test2@example.com",
+                "password": "TESTTEST",
+                "expected_message": "密码强度不足，需至少包含大小写字母和数字中的两类"
+            },
+            "register_password_number_error": {
+                "username": "test002",
+                "email": "test2@example.com",
+                "password": "123456789",
+                "expected_message": "密码强度不足，需至少包含大小写字母和数字中的两类"
+            },
+            "register_email_error": {
+                "username": "test003",
+                "email": "invalid-email",
+                "password": "Test123456",
+                "expected_message": "请输入正确的邮箱格式"
+            },
+            "register_password_confirm_error": {
+                "username": "test002",
+                "email": "test2@example.com",
+                "password": "Test123456",
+                "confirm_password": "Test1234567",
+                "expected_message": "两次输入的密码不一致"
+            },
+            "register_verify_code_wrong_error": {
+                "username": "test004",
+                "email": "test4@example.com",
+                "password": "Test123456",
+                "verify_code": "123456",
+                "expected_message": "验证码错误或已过期"
+            }
+        },
+        "register_out_of_date_verify_code": {
+            "register_verify_code_out_of_date_error": {
+                "username": "test004",
+                "email": "test4@example.com",
+                "password": "Test123456",
+                "expected_message": "验证码错误或已过期"
+            }
+        },
+        "login": {
+            "login_success": {
+                "username": "test001",
+                "password": "Test123456",
+                "expected_message": "登录成功"
+            },
+            "login_name_error": {
+                "username": "test005",
+                "password": "Test123456",
+                "expected_message": "用户名或密码错误，请稍后再试"
+            },
+            "login_password_error": {
+                "username": "test001",
+                "password": "Wrong123",
+                "expected_message": "用户名或密码错误，请稍后再试"
+            },
+            "login_lock_error": {
+                "username": "test001",
+                "password": "Wrong123",
+                "wrong_password_counts": 5,
+                "expected_message": "账号已锁定，请 30 分钟后再试"
+            }
+        },
+        "upload_password": {
+            "upload_password_same_error": {
+                "username": "test001",
+                "password": "Test123456",
+                "old_password": "Test123456",
+                "new_password": "Test123456",
+                "email": "test@example.com",
+                "expected_message": "新密码不能与当前密码相同"
+            },
+            "upload_password_error": {
+                "username": "test001",
+                "password": "Test123456",
+                "old_password": "Wrong123",
+                "new_password": "NewTest789",
+                "email": "test@example.com",
+                "expected_message": "当前密码不正确"
+            },
+            "upload_password_success": {
+                "username": "test001",
+                "password": "Test123456",
+                "old_password": "Test123456",
+                "new_password": "NewTest789",
+                "email": "test@example.com",
+                "expected_message": "个人信息更新成功"
+            }
+        },
+        "upload_avatar": {
+            "upload_avatar_png_success": {
+                "file_name": "success_png_avatar.png",
+                "expected_message": "头像更新成功"
+            },
+            "upload_avatar_jpg_success": {
+                "file_name": "success_jpg_avatar.jpg",
+                "expected_message": "头像更新成功"
+            },
+            "upload_avatar_png_error": {
+                "file_name": "error_png_avatar.png",
+                "expected_message": "上传头像大小不能超过2MB!"
+            },
+            "upload_avatar_jpg_error": {
+                "file_name": "error_jpg_avatar.png",
+                "expected_message": "上传头像大小不能超过2MB!"
+            },
+            "upload_avatar_txt_error": {
+                "file_name": "error_not_avatar.txt",
+                "expected_message": "上传头像只能是JPG或PNG格式!"
+            }
+        }
+    },
+    "crawler_task": {
+        "task_create": {
+            "task_create_success_1": {
+                "process_name": "自动化测试 1",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price"],
+                "platform": "Amazon",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_2": {
+                "process_name": "自动化测试 2",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price"],
+                "platform": "Amazon",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_3": {
+                "process_name": "自动化测试 3",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price"],
+                "platform": "Amazon",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_4": {
+                "process_name": "自动化测试 4",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price"],
+                "platform": "TEMU",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_5": {
+                "process_name": "自动化测试 5",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price"],
+                "platform": "TEMU",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_6": {
+                "process_name": "自动化测试 6",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price"],
+                "platform": "TEMU",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_7": {
+                "process_name": "自动化测试 7",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price"],
+                "platform": "Shopify",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_8": {
+                "process_name": "自动化测试 8",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price"],
+                "platform": "Shopify",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_9": {
+                "process_name": "自动化测试 9",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price"],
+                "platform": "Shopify",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_10": {
+                "process_name": "自动化测试 10",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price"],
+                "platform": "Chewy",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_11": {
+                "process_name": "自动化测试 11",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price"],
+                "platform": "Chewy",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_12": {
+                "process_name": "自动化测试 12",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price"],
+                "platform": "Chewy",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_13": {
+                "process_name": "自动化测试 13",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank"],
+                "platform": "Amazon",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_14": {
+                "process_name": "自动化测试 14",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank"],
+                "platform": "Amazon",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_15": {
+                "process_name": "自动化测试 15",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank"],
+                "platform": "Amazon",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_16": {
+                "process_name": "自动化测试 16",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank"],
+                "platform": "TEMU",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_17": {
+                "process_name": "自动化测试 17",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank"],
+                "platform": "TEMU",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_18": {
+                "process_name": "自动化测试 18",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank"],
+                "platform": "TEMU",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_19": {
+                "process_name": "自动化测试 19",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank"],
+                "platform": "Shopify",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_20": {
+                "process_name": "自动化测试 20",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank"],
+                "platform": "Shopify",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_21": {
+                "process_name": "自动化测试 21",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank"],
+                "platform": "Shopify",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_22": {
+                "process_name": "自动化测试 22",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank"],
+                "platform": "Chewy",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_23": {
+                "process_name": "自动化测试 23",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank"],
+                "platform": "Chewy",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_24": {
+                "process_name": "自动化测试 24",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank"],
+                "platform": "Chewy",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_25": {
+                "process_name": "自动化测试 25",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["review"],
+                "platform": "Amazon",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_26": {
+                "process_name": "自动化测试 26",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["review"],
+                "platform": "Amazon",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_27": {
+                "process_name": "自动化测试 27",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["review"],
+                "platform": "Amazon",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_28": {
+                "process_name": "自动化测试 28",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["review"],
+                "platform": "TEMU",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_29": {
+                "process_name": "自动化测试 29",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["review"],
+                "platform": "TEMU",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_30": {
+                "process_name": "自动化测试 30",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["review"],
+                "platform": "TEMU",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_31": {
+                "process_name": "自动化测试 31",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["review"],
+                "platform": "Shopify",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_32": {
+                "process_name": "自动化测试 32",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["review"],
+                "platform": "Shopify",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_33": {
+                "process_name": "自动化测试 33",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["review"],
+                "platform": "Shopify",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_34": {
+                "process_name": "自动化测试 34",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["review"],
+                "platform": "Chewy",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_35": {
+                "process_name": "自动化测试 35",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["review"],
+                "platform": "Chewy",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_36": {
+                "process_name": "自动化测试 36",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["review"],
+                "platform": "Chewy",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_37": {
+                "process_name": "自动化测试 37",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank"],
+                "platform": "Amazon",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_38": {
+                "process_name": "自动化测试 38",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank"],
+                "platform": "Amazon",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_39": {
+                "process_name": "自动化测试 39",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank"],
+                "platform": "Amazon",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_40": {
+                "process_name": "自动化测试 40",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank"],
+                "platform": "TEMU",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_41": {
+                "process_name": "自动化测试 41",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank"],
+                "platform": "TEMU",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_42": {
+                "process_name": "自动化测试 42",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank"],
+                "platform": "TEMU",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_43": {
+                "process_name": "自动化测试 43",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank"],
+                "platform": "Shopify",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_44": {
+                "process_name": "自动化测试 44",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank"],
+                "platform": "Shopify",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_45": {
+                "process_name": "自动化测试 45",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank"],
+                "platform": "Shopify",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_46": {
+                "process_name": "自动化测试 46",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank"],
+                "platform": "Chewy",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_47": {
+                "process_name": "自动化测试 47",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank"],
+                "platform": "Chewy",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_48": {
+                "process_name": "自动化测试 48",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank"],
+                "platform": "Chewy",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_49": {
+                "process_name": "自动化测试 49",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","review"],
+                "platform": "Amazon",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_50": {
+                "process_name": "自动化测试 50",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","review"],
+                "platform": "Amazon",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_51": {
+                "process_name": "自动化测试 51",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","review"],
+                "platform": "Amazon",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_52": {
+                "process_name": "自动化测试 52",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","review"],
+                "platform": "TEMU",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_53": {
+                "process_name": "自动化测试 53",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","review"],
+                "platform": "TEMU",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_54": {
+                "process_name": "自动化测试 54",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","review"],
+                "platform": "TEMU",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_55": {
+                "process_name": "自动化测试 55",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","review"],
+                "platform": "Shopify",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_56": {
+                "process_name": "自动化测试 56",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","review"],
+                "platform": "Shopify",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_57": {
+                "process_name": "自动化测试 57",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","review"],
+                "platform": "Shopify",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_58": {
+                "process_name": "自动化测试 58",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","review"],
+                "platform": "Chewy",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_59": {
+                "process_name": "自动化测试 59",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","review"],
+                "platform": "Chewy",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_60": {
+                "process_name": "自动化测试 60",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","review"],
+                "platform": "Chewy",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_61": {
+                "process_name": "自动化测试 61",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank","review"],
+                "platform": "Amazon",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_62": {
+                "process_name": "自动化测试 62",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank","review"],
+                "platform": "Amazon",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_63": {
+                "process_name": "自动化测试 63",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank","review"],
+                "platform": "Amazon",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_64": {
+                "process_name": "自动化测试 64",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank","review"],
+                "platform": "TEMU",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_65": {
+                "process_name": "自动化测试 65",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank","review"],
+                "platform": "TEMU",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_66": {
+                "process_name": "自动化测试 66",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank","review"],
+                "platform": "TEMU",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_67": {
+                "process_name": "自动化测试 67",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank","review"],
+                "platform": "Shopify",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_68": {
+                "process_name": "自动化测试 68",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank","review"],
+                "platform": "Shopify",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_69": {
+                "process_name": "自动化测试 69",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank","review"],
+                "platform": "Shopify",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_70": {
+                "process_name": "自动化测试 70",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank","review"],
+                "platform": "Chewy",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_71": {
+                "process_name": "自动化测试 71",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank","review"],
+                "platform": "Chewy",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_72": {
+                "process_name": "自动化测试 72",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["seller_rank","review"],
+                "platform": "Chewy",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_73": {
+                "process_name": "自动化测试 73",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank","review"],
+                "platform": "Amazon",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_74": {
+                "process_name": "自动化测试 74",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank","review"],
+                "platform": "Amazon",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_75": {
+                "process_name": "自动化测试 75",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank","review"],
+                "platform": "Amazon",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_76": {
+                "process_name": "自动化测试 76",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank","review"],
+                "platform": "TEMU",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_77": {
+                "process_name": "自动化测试 77",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank","review"],
+                "platform": "TEMU",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_78": {
+                "process_name": "自动化测试 78",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank","review"],
+                "platform": "TEMU",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_79": {
+                "process_name": "自动化测试 79",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank","review"],
+                "platform": "Shopify",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_80": {
+                "process_name": "自动化测试 80",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank","review"],
+                "platform": "Shopify",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_81": {
+                "process_name": "自动化测试 81",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank","review"],
+                "platform": "Shopify",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_82": {
+                "process_name": "自动化测试 82",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank","review"],
+                "platform": "Chewy",
+                "time_cycle": "daily",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_83": {
+                "process_name": "自动化测试 83",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank","review"],
+                "platform": "Chewy",
+                "time_cycle": "weekly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_success_84": {
+                "process_name": "自动化测试 84",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price","seller_rank","review"],
+                "platform": "Chewy",
+                "time_cycle": "monthly",
+                "expected_message": "爬虫任务创建成功",
+                "expected_url_contains": "/crawler/tasks"
+            },
+            "task_create_ASIN_error": {
+                "process_name": "自动化测试任务 85",
+                "asin_list": "B08XJ8J7SZ B08LGD78Q5",
+                "required_info": ["price", "review"],
+                "platform": "Amazon",
+                "time_cycle": "daily",
+                "expected_message": "保存任务失败，请稍后重试"
+            },
+            "task_create_None_ASIN_error": {
+                "process_name": "自动化测试任务 85",
+                "asin_list": "",
+                "required_info": ["price", "review"],
+                "platform": "Amazon",
+                "time_cycle": "daily",
+                "expected_message": "请输入 ASIN 列表"
+            },
+            "task_create_None_required_info_error": {
+                "process_name": "自动化测试任务 85",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": [],
+                "platform": "Amazon",
+                "time_cycle": "daily",
+                "expected_message": "请至少选择一项所需信息"
+            },
+            "task_create_None_platform_error": {
+                "process_name": "自动化测试任务 85",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price", "review"],
+                "platform": "",
+                "time_cycle": "daily",
+                "expected_message": "请选择抓取平台"
+            },
+            "task_create_None_time_cycle_error": {
+                "process_name": "自动化测试任务 85",
+                "asin_list": "B08XJ8J7SZ,B08LGD78Q5",
+                "required_info": ["price", "review"],
+                "platform": "Amazon",
+                "time_cycle": "",
+                "expected_message": "请选择时间周期"
+            }
+        },
+        "task_status": {
+            "task_pause_success": {
+                "task_name_contains": "自动化测试任务 84",
+                "expected_status": "暂停",
+                "expected_after_status": "恢复",
+                "expected_message": "任务已暂停"
+            },
+            "task_active_success": {
+                "task_name_contains": "自动化测试任务 83",
+                "expected_status": "恢复",
+                "expected_after_status": "暂停",
+                "expected_message": "任务已恢复执行"
+            }
+        },
+        "task_filter": {
+            "task_filter_active_success": {
+                "filter_status": "活跃"
+            },
+            "task_filter_paused_success": {
+                "filter_status": "暂停"
+            },
+            "task_filter_draft_success": {
+                "filter_status": "草稿"
+            },
+            "task_filter_amazon_success": {
+                "filter_platform": "Amazon"
+            },
+            "task_filter_temu_success": {
+                "filter_platform": "TEMU"
+            },
+            "task_filter_shopify_success": {
+                "filter_platform": "Shopify"
+            },
+            "task_filter_chewy_success": {
+                "filter_platform": "Chewy"
+            },
+            "task_filter_daily_success": {
+                "filter_cycle": "每天"
+            },
+            "task_filter_weekly_success": {
+                "filter_cycle": "每周"
+            },
+            "task_filter_monthly_success": {
+                "filter_cycle": "每月"
+            },
+            "task_filter_active_amazon_success": {
+                "filter_status": "活跃",
+                "filter_platform": "Amazon"
+            },
+            "task_filter_active_temu_success": {
+                "filter_status": "活跃",
+                "filter_platform": "TEMU"
+            },
+            "task_filter_active_shopify_success": {
+                "filter_status": "活跃",
+                "filter_platform": "Shopify"
+            },
+            "task_filter_active_chewy_success": {
+                "filter_status": "活跃",
+                "filter_platform": "Chewy"
+            },
+            "task_filter_paused_amazon_success": {
+                "filter_status": "暂停",
+                "filter_platform": "Amazon"
+            },
+            "task_filter_paused_temu_success": {
+                "filter_status": "暂停",
+                "filter_platform": "TEMU"
+            },
+            "task_filter_paused_shopify_success": {
+                "filter_status": "暂停",
+                "filter_platform": "Shopify"
+            },
+            "task_filter_paused_chewy_success": {
+                "filter_status": "暂停",
+                "filter_platform": "Chewy"
+            },
+            "task_filter_draft_amazon_success": {
+                "filter_status": "草稿",
+                "filter_platform": "Amazon"
+            },
+            "task_filter_draft_temu_success": {
+                "filter_status": "草稿",
+                "filter_platform": "TEMU"
+            },
+            "task_filter_draft_shopify_success": {
+                "filter_status": "草稿",
+                "filter_platform": "Shopify"
+            },
+            "task_filter_draft_chewy_success": {
+                "filter_status": "草稿",
+                "filter_platform": "Chewy"
+            },
+            "task_filter_active_daily_success": {
+                "filter_status": "活跃",
+                "filter_cycle": "每天"
+            },
+            "task_filter_active_weekly_success": {
+                "filter_status": "活跃",
+                "filter_cycle": "每周"
+            },
+            "task_filter_active_monthly_success": {
+                "filter_status": "活跃",
+                "filter_cycle": "每月"
+            },
+            "task_filter_paused_daily_success": {
+                "filter_status": "暂停",
+                "filter_cycle": "每天"
+            },
+            "task_filter_paused_weekly_success": {
+                "filter_status": "暂停",
+                "filter_cycle": "每周"
+            },
+            "task_filter_paused_monthly_success": {
+                "filter_status": "暂停",
+                "filter_cycle": "每月"
+            },
+            "task_filter_draft_daily_success": {
+                "filter_status": "草稿",
+                "filter_cycle": "每天"
+            },
+            "task_filter_draft_weekly_success": {
+                "filter_status": "草稿",
+                "filter_cycle": "每周"
+            },
+            "task_filter_amazon_daily_success": {
+                "filter_platform": "Amazon",
+                "filter_cycle": "每天"
+            },
+            "task_filter_amazon_weekly_success": {
+                "filter_platform": "Amazon",
+                "filter_cycle": "每周"
+            },
+            "task_filter_amazon_monthly_success": {
+                "filter_platform": "Amazon",
+                "filter_cycle": "每月"
+            },
+            "task_filter_temu_daily_success": {
+                "filter_platform": "TEMU",
+                "filter_cycle": "每天"
+            },
+            "task_filter_temu_weekly_success": {
+                "filter_platform": "TEMU",
+                "filter_cycle": "每周"
+            },
+            "task_filter_temu_monthly_success": {
+                "filter_platform": "TEMU",
+                "filter_cycle": "每月"
+            },
+            "task_filter_shopify_daily_success": {
+                "filter_platform": "Shopify",
+                "filter_cycle": "每天"
+            },
+            "task_filter_shopify_weekly_success": {
+                "filter_platform": "Shopify",
+                "filter_cycle": "每周"
+            },
+            "task_filter_shopify_monthly_success": {
+                "filter_platform": "Shopify",
+                "filter_cycle": "每月"
+            },
+            "task_filter_chewy_daily1_success": {
+                "filter_platform": "Chewy",
+                "filter_cycle": "每天"
+            },
+            "task_filter_chewy_daily2_success": {
+                "filter_platform": "Chewy",
+                "filter_cycle": "每天"
+            },
+            "task_filter_chewy_weekly_success": {
+                "filter_platform": "Chewy",
+                "filter_cycle": "每周"
+            },
+            "task_filter_chewy_monthly_success": {
+                "filter_platform": "Chewy",
+                "filter_cycle": "每月"
+            }
+        },
+        "export_data": {
+            "export_price_data": {
+                "task_name_contains": "Amazon_Matress_0722",
+                "data_type": "price-rank",
+                "expected_message": "数据导出成功",
+                "expected_file_contains": "Amazon_Matress_0722_价格与排名数据"
+            }
+        }
+    }
+}

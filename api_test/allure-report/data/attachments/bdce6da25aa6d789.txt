@@ -1,0 +1,14 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODYyMzIsImV4cCI6MTc1Mzk5MzQzMn0.qdVCgfeHlD_9zIYKh8Mvt51oA-78ivXKL72S4oSmLII","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_021 - 旧密码正确+新密码符合强度要求
+INFO:tests.test_user_auth:是否使用Token: True
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/userinfo
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer '}
+INFO:utils.request:响应状态码: 403
+INFO:utils.request:响应内容: 
+ERROR:tests.test_user_auth:用例断言失败: 状态码不符：预期200，实际403，完整response：<Response [403]>
+assert 403 == 200
+ +  where 403 = <Response [403]>.status_code

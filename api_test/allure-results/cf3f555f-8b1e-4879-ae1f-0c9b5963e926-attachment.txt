@@ -1,0 +1,28 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"注册成功","data":null}
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X3F2dGlyYSIsImlhdCI6MTc1NDk3NDk4OCwiZXhwIjoxNzU0OTgyMTg4fQ.9TnWTZbSkkTcLHS2VzY0pORmCVBda5iboxVfAA6D5oM","expiresIn":7200}}
+INFO:tests.test_user_auth:开始执行用例: auth_021 - 旧密码正确+新密码符合强度要求
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/send-verify-code
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"操作成功","data":"验证码已发送至您的邮箱"}
+INFO:tests.test_user_auth:发送验证码（第1次）到邮箱：admin1155@example.com，响应状态码：200
+INFO:tests.test_user_auth:为安全邮箱 admin1155@example.com 填充验证码: 560142
+INFO:tests.test_user_auth:是否使用Token: True
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/userinfo
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X3F2dGlyYSIsImlhdCI6MTc1NDk3NDk4OCwiZXhwIjoxNzU0OTgyMTg4fQ.9TnWTZbSkkTcLHS2VzY0pORmCVBda5iboxVfAA6D5oM'}
+INFO:utils.request:响应状态码: 400
+INFO:utils.request:响应内容: {"success":false,"message":"当前密码不正确","data":null}
+ERROR:tests.test_user_auth:用例断言失败: 状态码不符：预期200，实际400，完整response：{"success":false,"message":"当前密码不正确","data":null}
+assert 400 == 200
+ +  where 400 = <Response [400]>.status_code

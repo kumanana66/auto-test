@@ -1,0 +1,5 @@
+INFO:tests.test_user_auth:开始执行用例: auth_011 - 密码仅包含大写字母
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/register
+INFO:utils.request:请求头: {}
+INFO:utils.request:响应状态码: 400
+INFO:utils.request:响应内容: {"success":false,"message":"密码强度不足，需至少包含大小写字母和数字中的两类","data":null}

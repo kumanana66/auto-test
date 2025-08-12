@@ -1,0 +1,9 @@
+INFO:utils.request:请求URL: http://localhost:8080/api/auth/login
+INFO:utils.request:请求头: {'Content-Type': 'application/json'}
+INFO:utils.request:响应状态码: 200
+INFO:utils.request:响应内容: {"success":true,"message":"登录成功","data":{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODY5ODIsImV4cCI6MTc1Mzk5NDE4Mn0.IQotoVAMppNXd4xB_wv1CB6gzjIVg2PAP6gVc90YBMw","expiresIn":7200}}
+INFO:utils.request:请求URL: http://localhost:8080/api/crawler/tasks/243/export
+INFO:utils.request:使用Token: eyJhbGciOi...
+INFO:utils.request:请求头: {'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjExNTUiLCJpYXQiOjE3NTM5ODY5ODIsImV4cCI6MTc1Mzk5NDE4Mn0.IQotoVAMppNXd4xB_wv1CB6gzjIVg2PAP6gVc90YBMw'}
+INFO:utils.request:响应状态码: 500
+INFO:utils.request:响应内容: 导出数据失败: Task not found with id: 243
