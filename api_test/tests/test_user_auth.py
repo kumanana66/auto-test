@@ -6,7 +6,7 @@ from utils.case_loader import CaseLoader
 from utils.request import Request
 from utils.test_utils import assert_response, preprocess_request
 from utils.db_utils import DBUtils
-from tests.conftest import test_user  # 引入测试用户fixture
+from tests.conftest import test_user
 
 logger = logging.getLogger(__name__)
 
@@ -51,7 +51,7 @@ def send_and_get_verify_code(email):
                 raise
             time.sleep(2)  # 重试间隔
     
-    time.sleep(5)  # 缩短等待数据库写入时间（根据实际情况调整）
+    time.sleep(5)
     
     code = DBUtils.get_latest_verification_code(email)
     assert code is not None, f"未获取到{email}的验证码（数据库中无记录）"
@@ -155,7 +155,7 @@ def test_user_auth(case, test_user, image_fixtures):
             except Exception as e:
                 logger.warning(f"关闭文件句柄失败: {str(e)}")
 
-    # 8. 清理测试用户（避免脏数据）
+    # 8. 清理测试用户
     if not case["case_id"].startswith("auth_017"):  # 排除管理员登录用例
         DBUtils.clean_test_data(test_user["email"])
         logger.info(f"清理测试用户: {test_user['email']}")
